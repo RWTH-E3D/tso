@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ns0="http://purl.org/vocab/vann/">
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+  </owl:AnnotationProperty>
+
+  <owl:Ontology rdf:about="https://w3id.org/tso#">
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-23T00:00:00</dc:issued>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-26T15:00:00</dc:modified>
+    <owl:versionInfo>0.1.1 (WiP)</owl:versionInfo>
+    <dc:title>TUBES system ontology</dc:title>
+    <dc:description>The scope of the TUBES ontology is to explicitly define the topology of interconnected building service system and their components. As a lightweight ontology it has a strong alignment to other ontologies within the W3C community and aims to provide the means to link infor­ mation at data level within the AEC industry.</dc:description>
+    <dc:creator>Nicolas Pauen</dc:creator>
+    <dc:creator>Dominik Schlütter</dc:creator>
+    <dc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <rdfs:seeAlso rdf:resource="https://doi.org/10.1002/bapi.202000027"/>
+    <ns0:preferredNamespacePrefix>tso</ns0:preferredNamespacePrefix>
+    <ns0:preferredNamespaceUri rdf:resource="https://w3id.org/tso#"/>
+  </owl:Ontology>
+
+  <owl:Class rdf:about="https://w3id.org/tso#Element">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+    <rdfs:comment xml:lang="en">A component with some kind of technical characteristics (e.g. pipe, air terminal, sensor).</rdfs:comment>
+    <rdfs:comment xml:lang="de">Ein Bauelement mit technischen Eigenschaften (z.B. Rohr, Luftauslass, Sensor).</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/tso#FlowElement">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/tso#Element"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/tso#ControlElement"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+    <rdfs:comment xml:lang="en">A component that contributes to the flow within a system (e.g. pipe, valve, pump).</rdfs:comment>
+    <rdfs:comment xml:lang="de">Ein Bauelement, das zur Zirkulation innerhab eines Systems beiträgt (z.B. Rohr, Ventil, Pumpe).</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/tso#ControlElement">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/tso#Element"/>
+    <owl:disjointWith rdf:resource="https://w3id.org/tso#FlowElement"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+    <rdfs:comment xml:lang="en">A component that forms a part of the control (e.g. sensor, actuator) and does not con­ tribute to the flow.</rdfs:comment>
+    <rdfs:comment xml:lang="de">Ein Bauelement, das zur Steuerung dient (z.B. Sensor, Aktor) und nicht zur Zirkulation.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/tso#System">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+    <rdfs:comment xml:lang="en">An aggrega­tion of components (tso:Element) that define building service systems (e.g. domestic water, air supply, exhaust air)</rdfs:comment>
+    <rdfs:comment xml:lang="de">Zusammengehörende Komponenten (tso:Elements), die ein gebäudetechnisches System beschreiben (z.B. Trinkwasser, Frischluft, Abluft).</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/tso#Zone">
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+    <rdfs:comment xml:lang="en">A part of the world within a 3D spatial boundary (e.g. space, segment, building).</rdfs:comment>
+    <rdfs:comment xml:lang="de">Ein Teil der Welt mit einer räumlichen Ausdehnung (z.B. Raum, Segment, Gebäude).</rdfs:comment>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/tso#elementOf">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://w3id.org/tso#hasElement">
+        <owl:inverseOf rdf:resource="https://w3id.org/tso#elementOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#Element"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+
+    <rdfs:domain rdf:resource="https://w3id.org/tso#Element"/>
+    <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/tso#subSystemOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://w3id.org/tso#hasSubSystem">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/tso#subSystemOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+
+    <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+    <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/tso#serves">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://w3id.org/tso#servedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/tso#serves"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#Zone"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#Element"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+
+    <rdfs:domain rdf:resource="https://w3id.org/tso#Element"/>
+    <rdfs:range rdf:resource="https://w3id.org/tso#Zone"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/tso#connectsSystems">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+    <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/tso#connectsElements">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/tso#Element"/>
+    <rdfs:range rdf:resource="https://w3id.org/tso#Element"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/tso#controls">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#connectsElements"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://w3id.org/tso#isControlledBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#connectsElements"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/tso#controls"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#FlowElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#ControlElement"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+
+    <rdfs:domain rdf:resource="https://w3id.org/tso#ControlElement"/>
+    <rdfs:range rdf:resource="https://w3id.org/tso#FlowElement"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/tso#exchangeFlow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#connectsElements"/>
+    <rdfs:domain rdf:resource="https://w3id.org/tso#FlowElement"/>
+    <rdfs:range rdf:resource="https://w3id.org/tso#FlowElement"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/tso#suppliesFlow">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeFlow"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="https://w3id.org/tso#flowSuppliedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeFlow"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/tso#suppliesFlow"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#FlowElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#FlowElement"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+
+    <rdfs:domain rdf:resource="https://w3id.org/tso#FlowElement"/>
+    <rdfs:range rdf:resource="https://w3id.org/tso#FlowElement"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>
