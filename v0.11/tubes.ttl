@@ -1,0 +1,155 @@
+# TUBES system ontology
+# 
+
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix vann:     <http://purl.org/vocab/vann/> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix tso:      <https://w3id.org/tso#> .
+
+dcterms:issued a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+tso: rdf:type owl:Ontology ;
+  dcterms:issued      "2020-09-23T00:00:00"^^xsd:dateTime ;
+  dcterms:modified    "2021-01-26T15:00:00"^^xsd:dateTime ;
+  owl:versionInfo     "0.1.1 (WiP)" ;
+  dcterms:title       "TUBES system ontology" ;
+  dcterms:description "The scope of the TUBES ontology is to explicitly define the topology of interconnected building service system and their components. As a lightweight ontology it has a strong alignment to other ontologies within the W3C community and aims to provide the means to link infor­ mation at data level within the AEC industry." ;
+  dcterms:creator     "Nicolas Pauen" ;
+  dcterms:creator     "Dominik Schlütter" ;
+  dcterms:license     <https://creativecommons.org/licenses/by/4.0/> ;
+  rdfs:seeAlso        <https://doi.org/10.1002/bapi.202000027> ;
+  vann:preferredNamespacePrefix "tso" ;
+  vann:preferredNamespaceUri    <https://w3id.org/tso#> .
+  
+
+# Classes
+# 
+
+tso:Element a owl:Class ;
+  rdfs:isDefinedBy tso: ;
+  rdfs:comment "A component with some kind of technical characteristics (e.g. pipe, air terminal, sensor)."@en ;
+  rdfs:comment "Ein Bauelement mit technischen Eigenschaften (z.B. Rohr, Luftauslass, Sensor)."@de .
+
+tso:FlowElement a owl:Class ;
+  rdfs:subClassOf tso:Element ;
+  owl:disjointWith tso:ControlElement ;
+  rdfs:isDefinedBy tso: ;
+  rdfs:comment "A component that contributes to the flow within a system (e.g. pipe, valve, pump)."@en ;
+  rdfs:comment "Ein Bauelement, das zur Zirkulation innerhab eines Systems beiträgt (z.B. Rohr, Ventil, Pumpe)."@de .
+
+tso:ControlElement a owl:Class ;
+  rdfs:subClassOf tso:Element ;
+  owl:disjointWith tso:FlowElement ;
+  rdfs:isDefinedBy tso: ;
+  rdfs:comment "A component that forms a part of the control (e.g. sensor, actuator) and does not con­ tribute to the flow."@en ;
+  rdfs:comment "Ein Bauelement, das zur Steuerung dient (z.B. Sensor, Aktor) und nicht zur Zirkulation."@de .
+
+tso:System a owl:Class ;
+  rdfs:isDefinedBy tso: ;
+  rdfs:comment "An aggrega­tion of components (tso:Element) that define building service systems (e.g. domestic water, air supply, exhaust air)"@en ;
+  rdfs:comment "Zusammengehörende Komponenten (tso:Elements), die ein gebäudetechnisches System beschreiben (z.B. Trinkwasser, Frischluft, Abluft)."@de .
+
+tso:Zone a owl:Class ;
+  rdfs:isDefinedBy tso: ;
+  rdfs:comment "A part of the world within a 3D spatial boundary (e.g. space, segment, building)."@en ;
+  rdfs:comment "Ein Teil der Welt mit einer räumlichen Ausdehnung (z.B. Raum, Segment, Gebäude)."@de .
+
+
+
+# Object Properties
+# 
+
+tso:elementOf rdf:type owl:ObjectProperty ;
+  owl:inverseOf tso:hasElement ;
+  rdfs:domain tso:Element ;
+  rdfs:range tso:System ;
+  rdfs:isDefinedBy tso: .
+
+tso:hasElement rdf:type owl:ObjectProperty ;
+  owl:inverseOf tso:elementOf ;
+  rdfs:domain tso:System ;
+  rdfs:range tso:Element ;
+  rdfs:isDefinedBy tso: .
+
+tso:subSystemOf rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
+  owl:inverseOf tso:hasSubSystem ;
+  rdfs:domain tso:System ;
+  rdfs:range tso:System ;
+  rdfs:isDefinedBy tso: .
+
+tso:hasSubSystem rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
+  owl:inverseOf tso:subSystemOf ;
+  rdfs:domain tso:System ;
+  rdfs:range tso:System ;
+  rdfs:isDefinedBy tso: .
+
+
+tso:serves rdf:type owl:ObjectProperty ;
+  owl:inverseOf tso:servedBy ;
+  rdfs:domain tso:Element ;
+  rdfs:range tso:Zone ;
+  rdfs:isDefinedBy tso: .
+
+tso:servedBy rdf:type owl:ObjectProperty ;
+  owl:inverseOf tso:serves ;
+  rdfs:domain tso:Zone ;
+  rdfs:range tso:Element ;
+  rdfs:isDefinedBy tso: .
+
+
+tso:connectsSystems rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
+  rdfs:domain tso:System ;
+  rdfs:range tso:System ;
+  rdfs:isDefinedBy tso: .
+
+tso:connectsElements rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
+  rdfs:domain tso:Element ;
+  rdfs:range tso:Element ;
+  rdfs:isDefinedBy tso: .
+
+
+tso:controls rdf:type owl:ObjectProperty ;
+  rdfs:subPropertyOf tso:connectsElements ;
+  owl:inverseOf tso:isControlledBy ;
+  rdfs:domain tso:ControlElement ;
+  rdfs:range tso:FlowElement ;
+  rdfs:isDefinedBy tso: .
+
+tso:isControlledBy rdf:type owl:ObjectProperty ;
+  rdfs:subPropertyOf tso:connectsElements ;
+  owl:inverseOf tso:controls ;
+  rdfs:domain tso:FlowElement ;
+  rdfs:range tso:ControlElement ;
+  rdfs:isDefinedBy tso: .
+
+
+tso:exchangeFlow rdf:type owl:ObjectProperty , owl:SymmetricProperty ;
+  rdfs:subPropertyOf tso:connectsElements ;
+  rdfs:domain tso:FlowElement ;
+  rdfs:range tso:FlowElement ;
+  rdfs:isDefinedBy tso: .
+
+tso:suppliesFlow rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
+  rdfs:subPropertyOf tso:exchangeFlow ;
+  owl:inverseOf tso:flowSuppliedBy ;
+  rdfs:domain tso:FlowElement ;
+  rdfs:range tso:FlowElement ;
+  rdfs:isDefinedBy tso: .
+
+tso:flowSuppliedBy rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
+  rdfs:subPropertyOf tso:exchangeFlow ;
+  owl:inverseOf tso:suppliesFlow ;
+  rdfs:domain tso:FlowElement ;
+  rdfs:range tso:FlowElement ;
+  rdfs:isDefinedBy tso: .
