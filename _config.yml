@@ -1,4 +1,5 @@
 theme: jekyll-theme-minimal
+logo: /assets/img/logo.png
 plugins:
   - jekyll-relative-links
 relative_links:
