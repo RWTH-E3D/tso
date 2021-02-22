@@ -78,7 +78,73 @@
     "@id": "https://doi.org/10.1002/bapi.202000027"
   },
   {
-    "@id": "https://w3id.org/bot#AutomationSystem",
+    "@id": "https://w3id.org/tso#",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@value": "2020-09-23T00:00:00",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@value": "2021-02-22T15:00:00",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionIRI": [
+      {
+        "@id": "https://w3id.org/v0.2/tubes"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "0.2"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "TUBES system ontology"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "The scope of the TUBES ontology is to explicitly define the topology of interconnected building service system and their relationship to the spatial structure. It has a strong alignment to other ontologies within the W3C community and aims to provide the means to link information at data level within the AEC industry."
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Nicolas Pauen"
+      },
+      {
+        "@value": "Dominik Schlütter"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://doi.org/10.1002/bapi.202000027"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
+      {
+        "@value": "tso"
+      }
+    ],
+    "http://purl.org/vocab/vann/preferredNamespaceUri": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#AutomationSystem",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -99,12 +165,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/bot#ConversionSystem",
+    "@id": "https://w3id.org/tso#ConversionSystem",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -125,12 +191,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/bot#CoolingSystem",
+    "@id": "https://w3id.org/tso#CoolingSystem",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -145,18 +211,18 @@
         "@language": "en"
       },
       {
-        "@value": "Ein System, welches thermische Energie fÃ¼r den Zweck der KÃ¼hlung verteilt/speichert/konvertiert.",
+        "@value": "Ein System, welches thermische Energie für den Zweck der Kühlung verteilt/speichert/konvertiert.",
         "@language": "de"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/bot#DataSystem",
+    "@id": "https://w3id.org/tso#DataSystem",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -177,12 +243,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/bot#DistributionSystem",
+    "@id": "https://w3id.org/tso#DistributionSystem",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -203,12 +269,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/bot#DrainageSystem",
+    "@id": "https://w3id.org/tso#DrainageSystem",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -223,18 +289,18 @@
         "@language": "en"
       },
       {
-        "@value": "Ein System, welches Masse abfÃ¼hrt.",
+        "@value": "Ein System, welches Masse abführt.",
         "@language": "de"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/bot#ElectricalSystem",
+    "@id": "https://w3id.org/tso#ElectricalSystem",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -255,18 +321,18 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/bot#EnergyConversionSystem",
+    "@id": "https://w3id.org/tso#EnergyConversionSystem",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/bot#ConversionSystem"
+        "@id": "https://w3id.org/tso#ConversionSystem"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -281,12 +347,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/bot#FluidSystem",
+    "@id": "https://w3id.org/tso#FluidSystem",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -301,18 +367,18 @@
         "@language": "en"
       },
       {
-        "@value": "Ein System, welches gasfÃ¶rmige/flÃ¼ssige Masse versorgt/speichert/konvertiert.",
+        "@value": "Ein System, welches gasförmige/flüssige Masse versorgt/speichert/konvertiert.",
         "@language": "de"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/bot#HeatingCoolingSystem",
+    "@id": "https://w3id.org/tso#HeatingCoolingSystem",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -327,18 +393,18 @@
         "@language": "en"
       },
       {
-        "@value": "Ein System, welches thermische Energie fÃ¼r den Zweck der Heizung und/oder KÃ¼hlung verteilt/speichert/konvertiert.",
+        "@value": "Ein System, welches thermische Energie für den Zweck der Heizung und/oder Kühlung verteilt/speichert/konvertiert.",
         "@language": "de"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/bot#HeatingSystem",
+    "@id": "https://w3id.org/tso#HeatingSystem",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -353,18 +419,18 @@
         "@language": "en"
       },
       {
-        "@value": "Ein System, welches thermische Energie fÃ¼r den Zweck der Heizung verteilt/speichert/konvertiert.",
+        "@value": "Ein System, welches thermische Energie für den Zweck der Heizung verteilt/speichert/konvertiert.",
         "@language": "de"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/bot#LightingSystem",
+    "@id": "https://w3id.org/tso#LightingSystem",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -379,24 +445,24 @@
         "@language": "en"
       },
       {
-        "@value": "Ein System, welches elektrische Energie fÃ¼r den Zwecke der Beleuchtung versorgt/speichert/konvertiert.",
+        "@value": "Ein System, welches elektrische Energie für den Zwecke der Beleuchtung versorgt/speichert/konvertiert.",
         "@language": "de"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/bot#ReturnSystem",
+    "@id": "https://w3id.org/tso#ReturnSystem",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "https://w3id.org/bot#DistributionSystem"
+        "@id": "https://w3id.org/tso#DistributionSystem"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -405,18 +471,18 @@
         "@language": "en"
       },
       {
-        "@value": "Ein System, welches Masse, Energie und/oder Daten zurÃ¼ckfÃ¼hrt.",
+        "@value": "Ein System, welches Masse, Energie und/oder Daten zurückführt.",
         "@language": "de"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/bot#SafetySystem",
+    "@id": "https://w3id.org/tso#SafetySystem",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -431,1732 +497,13 @@
         "@language": "en"
       },
       {
-        "@value": "Ein System, welches vor Gefahr und SchÃ¤den schÃ¼tzt.",
+        "@value": "Ein System, welches vor Gefahr und Schäden schützt.",
         "@language": "de"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#StorageSystem",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A system which stores mass, energy and/or data.",
-        "@language": "en"
-      },
-      {
-        "@value": "Ein System, welches Masse, Energie und/oder Daten speichert",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#SupplySystem",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/bot#DistributionSystem"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A system which supplies mass, energy and/or data.",
-        "@language": "en"
-      },
-      {
-        "@value": "Ein System, welches Masse, Energie und/oder Daten versorgt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#TreatmentSystem",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/bot#ConversionSystem"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A system which converts/treats a flow.",
-        "@language": "en"
-      },
-      {
-        "@value": "Ein System, welches Masse konvertiert/behandelt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#VentilationSystem",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A system which supplies ventilation.",
-        "@language": "en"
-      },
-      {
-        "@value": "Ein System, welches Ventilation versorgt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#dataServedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#servedBy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a zone to a system to describe that the zone is served data by a system.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Daten versorgt wird.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#dataSuppliedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#exchangeData"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/bot#suppliesData"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system has data supplied by the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Daten von einem anderen System zufÃ¼hrt bekommt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#electricalEnergyServedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#energyServedBy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a zone to a system to describe that the zone is served electrical energy by a system.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit elektrischer Energie versorgt wird.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#electricalEnergySuppliedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#exchangeElectricalEnergy"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/bot#suppliesElectricalEnergy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system has electrical energy supplied by the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System elektrische Energie von einem anderen System zufÃ¼hrt bekommt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#energyServedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#servedBy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a zone to a system to describe that the zone is served energy by a system.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Energie versorgt wird.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#energySuppliedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#exchangeEnergy"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/tso#exchangeEnergy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system has energy supplied by the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Energie von einem anderen System zufÃ¼hrt bekommt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#exchangeElectricalEnergy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#SymmetricProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#exchangeEnergy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that the systems exchange electrical energy.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme elektrisch Energie austauschen.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#exchangeFluid",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#SymmetricProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#exchangeMass"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that the systems exchange fluid.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme flÃ¼ssige/gasfÃ¶rmige Masse austauschen.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#exchangeGas",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#SymmetricProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#exchangeFluid"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that the systems exchange gas.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme gasfÃ¶rmige Masse austauschen.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#exchangeLiquid",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#SymmetricProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#exchangeFluid"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that the systems exchange liquid.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme flÃ¼ssige Masse austauschen.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#exchangeSolid",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#SymmetricProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#exchangeMass"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that the systems exchange solid.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme feste Masse austauschen.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#fluidServedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#massServedBy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a zone to a system to describe that the zone is served fluid mass by a system.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit flÃ¼ssiger/gasfÃ¶rmiger Masse versorgt wird.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#fluidSuppliedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#exchangeFluid"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/bot#suppliesFluid"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system has fluid mass supplied by the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flÃ¼ssige/gasfÃ¶rmige von einem anderen System zufÃ¼hrt bekommt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#gasServedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#fluidServedBy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a zone to a system to describe that the zone is served gaseous mass by a system.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit gasfÃ¶rmiger Masse versorgt wird.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#gasSuppliedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#exchangeGas"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/bot#suppliesGas"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system has gaseous mass supplied by the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System gasfÃ¶rmige Masse von einem anderen System zufÃ¼hrt bekommt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#hasSubState",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#TransitiveProperty"
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/bot#subStateOf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#State"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#State"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a state to its sub state.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche einen Zustand mit dessen Subzustand verbindet.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#lightEnergyServedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#energyServedBy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a zone to a system to describe that the zone is served light energy by a system.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Lichtenergie versorgt wird.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#liquidServedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#fluidServedBy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a zone to a system to describe that the zone is served liquid mass by a system.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit flÃ¼ssiger Masse versorgt wird.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#liquidSuppliedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#exchangeLiquid"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/bot#suppliesLiquid"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system has liquid mass supplied by the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flÃ¼ssige Masse von einem anderen System zufÃ¼hrt bekommt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#massServedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#servedBy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a zone to a system to describe that the zone is served mass by a system.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Masse versorgt wird.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#massSuppliedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#exchangeMass"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/bot#suppliesMass"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system has mass supplied by the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Masse von einem anderen System zufÃ¼hrt bekommt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#mechanicalEnergyServedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#energyServedBy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a zone to a system to describe that the zone is served mechanical energy by a system.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit mechanischer Energie versorgt wird.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#mechanicalEnergySuppliedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#exchangeMechanicalEnergy"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/bot#suppliesMechanicalEnergy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system has mechanical energy supplied by the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System mechanische Energie von einem anderen System zufÃ¼hrt bekommt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#servesData",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#serves"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a system to a zone to describe that the system serves data to the zone.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Daten versorgt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#servesFluid",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#servesMass"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a system to a zone to describe that the system serves fluid mass to the zone.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer flÃ¼ssigen/gasfÃ¶rmigen Masse versorgt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#servesGas",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#servesFluid"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a system to a zone to describe that the system serves gaseous mass to the zone.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer gasfÃ¶rmigen Masse versorgt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#servesLiquid",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#servesFluid"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a system to a zone to describe that the system serves liquid mass to the zone.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer flÃ¼ssigen Masse versorgt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#servesMechanicalEnergy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#servesEnergy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a system to a zone to describe that the system serves mechanical energy to the zone.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit mechanischer Energie versorgt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#solidServedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#massServedBy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a zone to a system to describe that the zone is served solid mass by a system.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit fester Masse versorgt wird.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#solidSuppliedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#exchangeSolid"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/bot#suppliesSolid"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system has solid mass supplied by the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System feste Masse von einem anderen System zufÃ¼hrt bekommt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#soundEnergyServedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#energyServedBy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a zone to a system to describe that the zone is served sound energy by a system.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Schallenergie versorgt wird.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#subStateOf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#TransitiveProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#State"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#State"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a state to its super state.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche einen Zustand mit dessen Superzustand verbindet.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#suppliesData",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#exchangeData"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system supplies data to the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Daten an das andere System zufÃ¼hrt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#suppliesElectricalEnergy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#exchangeElectricalEnergy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system supplies electrical energy to the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System elektrische Energie an das andere System zufÃ¼hrt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#suppliesEnergy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#exchangeEnergy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system supplies energy to the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Energie an das andere System zufÃ¼hrt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#suppliesFluid",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#exchangeFluid"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system supplies fluid mass to the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flÃ¼ssige/gasfÃ¶rmige Masse an das andere System zufÃ¼hrt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#suppliesGas",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#exchangeGas"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system supplies gaseous mass to the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System gasfÃ¶rmige Masse an das andere System zufÃ¼hrt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#suppliesLiquid",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#exchangeLiquid"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system supplies liquid mass to the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flÃ¼ssige Masse an das andere System zufÃ¼hrt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#suppliesMass",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#exchangeMass"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system supplies mass to the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Masse an das andere System zufÃ¼hrt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#suppliesMechanicalEnergy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#exchangeMechanicalEnergy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system supplies mechanical energy to the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System mechanische Energie an das andere System zufÃ¼hrt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#suppliesSolid",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#exchangeSolid"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system supplies solid mass to the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System feste Masse an das andere System zufÃ¼hrt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#suppliesThermalEnergy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#exchangeThermalEnergy"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "https://w3id.org/bot#themalEnergySuppliedBy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system supplies thermal energy to the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System thermische Energie an das andere System zufÃ¼hrt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#themalEnergySuppliedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/tso#exchangeThermalEnergy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking systems to describe that one system has energy supplied by the other.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System thermische Energie von einem anderen System zufÃ¼hrt bekommt.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/bot#thermalEnergyServedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/bot#energyServedBy"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://w3id.org/tso#System"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A relationship linking a zone to a system to describe that the zone is served thermal energy by a system.",
-        "@language": "en"
-      },
-      {
-        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit thermischer Energie versorgt wird.",
-        "@language": "de"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@value": "https://w3id.org/tso#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/tso#",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Ontology"
-    ],
-    "http://www.w3.org/2002/07/owl#versionIRI": [
-      {
-        "@id": "https://w3id.org/v0.2/tubes"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@value": "Dominik SchlÃ¼tter"
-      },
-      {
-        "@value": "Nicolas Pauen"
-      }
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@value": "The scope of the TUBES ontology is to explicitly define the topology of interconnected building service system and their relationship to the spatial structure. It has a strong alignment to other ontologies within the W3C community and aims to provide the means to link information at data level within the AEC industry."
-      }
-    ],
-    "http://purl.org/dc/terms/issued": [
-      {
-        "@value": "2020-09-23T00:00:00",
-        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-      }
-    ],
-    "http://purl.org/dc/terms/license": [
-      {
-        "@id": "https://creativecommons.org/licenses/by/4.0/"
-      }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@value": "2021-02-20T15:00:00",
-        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-      }
-    ],
-    "http://purl.org/vocab/vann/preferredNamespacePrefix": [
-      {
-        "@value": "tso"
-      }
-    ],
-    "http://purl.org/vocab/vann/preferredNamespaceUri": [
       {
         "@id": "https://w3id.org/tso#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "https://doi.org/10.1002/bapi.202000027"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#versionInfo": [
-      {
-        "@value": "TUBES System Ontology"
-      },
-      {
-        "@value": "v0.2"
       }
     ]
   },
@@ -2179,7 +526,59 @@
         "@language": "en"
       },
       {
-        "@value": "Ein Zustand beschreibt die innere Verfassung eines geplanten oder abstrakten Systems. Dies umfasst spezifische Aspekte wie an, aus, offen oder geschlossen als auch Ã¼bergreifende Aspekte wie zum Beispiel Frischluftbetrieb, Mischluftbetrieb oder Heizbetrieb.",
+        "@value": "Ein Zustand beschreibt die innere Verfassung eines geplanten oder abstrakten Systems. Dies umfasst spezifische Aspekte wie an, aus, offen oder geschlossen als auch übergreifende Aspekte wie zum Beispiel Frischluftbetrieb, Mischluftbetrieb oder Heizbetrieb.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#StorageSystem",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A system which stores mass, energy and/or data.",
+        "@language": "en"
+      },
+      {
+        "@value": "Ein System, welches Masse, Energie und/oder Daten speichert",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#SupplySystem",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/tso#DistributionSystem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A system which supplies mass, energy and/or data.",
+        "@language": "en"
+      },
+      {
+        "@value": "Ein System, welches Masse, Energie und/oder Daten versorgt.",
         "@language": "de"
       }
     ],
@@ -2205,7 +604,59 @@
         "@language": "en"
       },
       {
-        "@value": "Ein System ist das Modell einer Ganzheit welches von seiner Umgebung bzw. einem Supersystems abgegrenzt ist, welches aus miteinander verknÃ¼pften Komponenten oder Subsystemen bestehen kann und Beziehungen zwischen Attributen wie Inputs, Outputs und ZustÃ¤nden aufweist.",
+        "@value": "Ein System ist das Modell einer Ganzheit welches von seiner Umgebung bzw. einem Supersystems abgegrenzt ist, welches aus miteinander verknüpften Komponenten oder Subsystemen bestehen kann und Beziehungen zwischen Attributen wie Inputs, Outputs und Zuständen aufweist.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#TreatmentSystem",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/tso#ConversionSystem"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A system which converts/treats a flow.",
+        "@language": "en"
+      },
+      {
+        "@value": "Ein System, welches Masse konvertiert/behandelt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#VentilationSystem",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A system which supplies ventilation.",
+        "@language": "en"
+      },
+      {
+        "@value": "Ein System, welches Ventilation versorgt.",
         "@language": "de"
       }
     ],
@@ -2226,13 +677,13 @@
         "@language": "en"
       },
       {
-        "@value": "Ein Teil der realen oder virtuellen Welt die beide Teil dieser Welt sind und eine rÃ¤umliche Ausdehnung hat.",
+        "@value": "Ein Teil der realen oder virtuellen Welt die beide Teil dieser Welt sind und eine räumliche Ausdehnung hat.",
         "@language": "de"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2258,7 +709,253 @@
         "@language": "en"
       },
       {
-        "@value": "Eine Beziehung, welche System untereinander verbindet um deren topologische VerknÃ¼pfung zu beschreiben.",
+        "@value": "Eine Beziehung, welche System untereinander verbindet um deren topologische Verknüpfung zu beschreiben.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#dataServedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#servedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#servesData"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a zone to a system to describe that the zone is served data by a system.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Daten versorgt wird.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#dataSuppliedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeData"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#suppliesData"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system has data supplied by the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Daten von einem anderen System zuführt bekommt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#electricalEnergyServedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#energyServedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#servesElectricalEnergy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a zone to a system to describe that the zone is served electrical energy by a system.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit elektrischer Energie versorgt wird.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#electricalEnergySuppliedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeElectricalEnergy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#suppliesElectricalEnergy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system has electrical energy supplied by the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System elektrische Energie von einem anderen System zuführt bekommt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#energyServedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#servedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#serves"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a zone to a system to describe that the zone is served energy by a system.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Energie versorgt wird.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#energySuppliedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeEnergy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#suppliesEnergy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system has energy supplied by the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Energie von einem anderen System zuführt bekommt.",
         "@language": "de"
       }
     ],
@@ -2301,7 +998,44 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#exchangeElectricalEnergy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#SymmetricProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeEnergy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that the systems exchange electrical energy.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme elektrisch Energie austauschen.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2338,7 +1072,118 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#exchangeFluid",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#SymmetricProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeMass"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that the systems exchange fluid.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme flüssige/gasförmige Masse austauschen.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#exchangeGas",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#SymmetricProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeFluid"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that the systems exchange gas.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme gasförmige Masse austauschen.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#exchangeLiquid",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#SymmetricProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeFluid"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that the systems exchange liquid.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme flüssige Masse austauschen.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2375,7 +1220,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2412,7 +1257,44 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#exchangeSolid",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#SymmetricProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeMass"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that the systems exchange solid.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme feste Masse austauschen.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2449,7 +1331,171 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#fluidServedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#massServedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#servesFluid"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a zone to a system to describe that the zone is served fluid mass by a system.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit flüssiger/gasförmiger Masse versorgt wird.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#fluidSuppliedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeFluid"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#suppliesFluid"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system has fluid mass supplied by the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige/gasförmige von einem anderen System zuführt bekommt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#gasServedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#fluidServedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#servesGas"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a zone to a system to describe that the zone is served gaseous mass by a system.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit gasförmiger Masse versorgt wird.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#gasSuppliedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeGas"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#suppliesGas"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system has gaseous mass supplied by the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System gasförmige Masse von einem anderen System zuführt bekommt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2466,6 +1512,31 @@
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "reference designation key",
+        "@language": "en"
+      },
+      {
+        "@value": "Anlagenkennzeichnungsschlüssel",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An alphanumeric String to link the system to reference designation systems.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine alphanumerische Zeichenkette als Anlagenkennzeichnungsschlüssel.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2501,7 +1572,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2537,7 +1608,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2573,7 +1644,44 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#hasSubState",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#TransitiveProperty"
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#subStateOf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#State"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#State"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a state to its sub state.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche einen Zustand mit dessen Subzustand verbindet.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2614,6 +1722,293 @@
     ]
   },
   {
+    "@id": "https://w3id.org/tso#lightEnergyServedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#energyServedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#servesLightEnergy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a zone to a system to describe that the zone is served light energy by a system.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Lichtenergie versorgt wird.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#liquidServedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#fluidServedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#servesLiquid"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a zone to a system to describe that the zone is served liquid mass by a system.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit flüssiger Masse versorgt wird.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#liquidSuppliedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeLiquid"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#suppliesLiquid"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system has liquid mass supplied by the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige Masse von einem anderen System zuführt bekommt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#massServedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#servedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#servesMass"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a zone to a system to describe that the zone is served mass by a system.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Masse versorgt wird.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#massSuppliedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeMass"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#suppliesMass"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system has mass supplied by the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Masse von einem anderen System zuführt bekommt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#mechanicalEnergyServedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#energyServedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#servesMechanicalEnergy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a zone to a system to describe that the zone is served mechanical energy by a system.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit mechanischer Energie versorgt wird.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#mechanicalEnergySuppliedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeMechanicalEnergy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#suppliesMechanicalEnergy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system has mechanical energy supplied by the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System mechanische Energie von einem anderen System zuführt bekommt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
     "@id": "https://w3id.org/tso#servedBy",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -2621,6 +2016,11 @@
     "http://www.w3.org/2002/07/owl#inverseOf": [
       {
         "@id": "https://w3id.org/tso#serves"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
@@ -2649,9 +2049,19 @@
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#servedBy"
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
         "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -2671,7 +2081,48 @@
     ]
   },
   {
-    "@id": "https://w3id.org/tso#servesElectricEnergy",
+    "@id": "https://w3id.org/tso#servesData",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#serves"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#dataServedBy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a system to a zone to describe that the system serves data to the zone.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Daten versorgt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#servesElectricalEnergy",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -2680,9 +2131,19 @@
         "@id": "https://w3id.org/tso#servesEnergy"
       }
     ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#electricalEnergyServedBy"
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
         "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -2697,7 +2158,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2711,9 +2172,19 @@
         "@id": "https://w3id.org/tso#serves"
       }
     ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#energyServedBy"
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
         "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -2728,7 +2199,89 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#servesFluid",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#servesMass"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#fluidServedBy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a system to a zone to describe that the system serves fluid mass to the zone.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer flüssigen/gasförmigen Masse versorgt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#servesGas",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#servesFluid"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#gasServedBy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a system to a zone to describe that the system serves gaseous mass to the zone.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer gasförmigen Masse versorgt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2742,9 +2295,19 @@
         "@id": "https://w3id.org/tso#servesEnergy"
       }
     ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#lightEnergyServedBy"
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
         "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -2759,7 +2322,48 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#servesLiquid",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#servesFluid"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#liquidServedBy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a system to a zone to describe that the system serves liquid mass to the zone.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer flüssigen Masse versorgt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2773,9 +2377,19 @@
         "@id": "https://w3id.org/tso#serves"
       }
     ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#massServedBy"
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
         "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -2790,7 +2404,48 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#servesMechanicalEnergy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#servesEnergy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#mechanicalEnergyServedBy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a system to a zone to describe that the system serves mechanical energy to the zone.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit mechanischer Energie versorgt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2804,9 +2459,19 @@
         "@id": "https://w3id.org/tso#servesMass"
       }
     ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#solidServedBy"
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
         "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -2821,7 +2486,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2835,9 +2500,19 @@
         "@id": "https://w3id.org/tso#servesEnergy"
       }
     ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#soundEnergyServedBy"
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
         "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -2852,7 +2527,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2866,9 +2541,19 @@
         "@id": "https://w3id.org/tso#servesEnergy"
       }
     ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#thermalEnergyServedBy"
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
         "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -2883,7 +2568,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2908,13 +2593,136 @@
         "@language": "en"
       },
       {
-        "@value": "Eine Beziehung, welche das dazugehÃ¶rige System der Senke identifiziert.",
+        "@value": "Eine Beziehung, welche das dazugehörige System der Senke identifiziert.",
         "@language": "de"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#solidServedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#massServedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#servesSolid"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a zone to a system to describe that the zone is served solid mass by a system.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit fester Masse versorgt wird.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#solidSuppliedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeSolid"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#suppliesSolid"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system has solid mass supplied by the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System feste Masse von einem anderen System zuführt bekommt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#soundEnergyServedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#energyServedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#servesSoundEnergy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a zone to a system to describe that the zone is served sound energy by a system.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Schallenergie versorgt wird.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2939,13 +2747,13 @@
         "@language": "en"
       },
       {
-        "@value": "Eine Beziehung, welche das dazugehÃ¶rige System einer Quelle identifiziert.",
+        "@value": "Eine Beziehung, welche das dazugehörige System einer Quelle identifiziert.",
         "@language": "de"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -2970,13 +2778,45 @@
         "@language": "en"
       },
       {
-        "@value": "Eine Beziehung, welche das dazugehÃ¶rige System eines Zustand identifiziert.",
+        "@value": "Eine Beziehung, welche das dazugehörige System eines Zustand identifiziert.",
         "@language": "de"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "https://w3id.org/tso#"
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#subStateOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#TransitiveProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#State"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#State"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a state to its super state.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche einen Zustand mit dessen Superzustand verbindet.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
       }
     ]
   },
@@ -3002,6 +2842,448 @@
       },
       {
         "@value": "Eine Beziehung, welche ein System mit dessen Supersystem verbindet.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#suppliesData",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeData"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system supplies data to the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Daten an das andere System zuführt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#suppliesElectricalEnergy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeElectricalEnergy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system supplies electrical energy to the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System elektrische Energie an das andere System zuführt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#suppliesEnergy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeEnergy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system supplies energy to the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Energie an das andere System zuführt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#suppliesFluid",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeFluid"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system supplies fluid mass to the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige/gasförmige Masse an das andere System zuführt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#suppliesGas",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeGas"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system supplies gaseous mass to the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System gasförmige Masse an das andere System zuführt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#suppliesLiquid",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeLiquid"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system supplies liquid mass to the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige Masse an das andere System zuführt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#suppliesMass",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeMass"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system supplies mass to the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Masse an das andere System zuführt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#suppliesMechanicalEnergy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeMechanicalEnergy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system supplies mechanical energy to the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System mechanische Energie an das andere System zuführt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#suppliesSolid",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeSolid"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system supplies solid mass to the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System feste Masse an das andere System zuführt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#suppliesThermalEnergy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeThermalEnergy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#themalEnergySuppliedBy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system supplies thermal energy to the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System thermische Energie an das andere System zuführt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#themalEnergySuppliedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#exchangeThermalEnergy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking systems to describe that one system has energy supplied by the other.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System thermische Energie von einem anderen System zuführt bekommt.",
+        "@language": "de"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/tso#"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tso#thermalEnergyServedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/tso#energyServedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/tso#servesThermalEnergy"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://w3id.org/tso#Zone"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/tso#System"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A relationship linking a zone to a system to describe that the zone is served thermal energy by a system.",
+        "@language": "en"
+      },
+      {
+        "@value": "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit thermischer Energie versorgt wird.",
         "@language": "de"
       }
     ],
