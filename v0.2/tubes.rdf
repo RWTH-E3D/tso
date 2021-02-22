@@ -9,973 +9,19 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/">
     <owl:Ontology rdf:about="https://w3id.org/tso#">
+        <owl:versionIRI rdf:resource="https://w3id.org/v0.2/tubes"/>
         <dc:creator>Dominik Schlütter</dc:creator>
         <dc:creator>Nicolas Pauen</dc:creator>
         <dc:description>The scope of the TUBES ontology is to explicitly define the topology of interconnected building service system and their relationship to the spatial structure. It has a strong alignment to other ontologies within the W3C community and aims to provide the means to link information at data level within the AEC industry.</dc:description>
         <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-23T00:00:00</dc:issued>
         <dc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-26T15:00:00</dc:modified>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-20T15:00:00</dc:modified>
         <vann:preferredNamespacePrefix>tso</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/tso#"/>
         <rdfs:seeAlso rdf:resource="https://doi.org/10.1002/bapi.202000027"/>
         <owl:versionInfo>TUBES System Ontology</owl:versionInfo>
         <owl:versionInfo>v0.2</owl:versionInfo>
-        <owl:versionIRI rdf:resource="https://w3id.org/v0.2/tubes.rdf"/>
     </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/dc/terms/creator -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/description -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/issued -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/license -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/modified -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/title -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
-    
-
-
-    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
-    
-
-
-    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/bot#dataServedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#dataServedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servedBy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served data by a system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Daten versorgt wird.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#dataSuppliedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#dataSuppliedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeData"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/bot#suppliesData"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has data supplied by the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Daten von einem anderen System zuführt bekommt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#electricalEnergyServedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#electricalEnergyServedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#energyServedBy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served electrical energy by a system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit elektrischer Energie versorgt wird.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#electricalEnergySuppliedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#electricalEnergySuppliedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeElectricalEnergy"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/bot#suppliesElectricalEnergy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has electrical energy supplied by the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System elektrische Energie von einem anderen System zuführt bekommt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#energyServedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#energyServedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servedBy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served energy by a system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Energie versorgt wird.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#energySuppliedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#energySuppliedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeEnergy"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/tso#exchangeEnergy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has energy supplied by the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Energie von einem anderen System zuführt bekommt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#exchangeElectricalEnergy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#exchangeElectricalEnergy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeEnergy"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange electrical energy.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme elektrisch Energie austauschen.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#exchangeFluid -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#exchangeFluid">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeMass"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange fluid.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme flüssige/gasförmige Masse austauschen.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#exchangeGas -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#exchangeGas">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeFluid"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange gas.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme gasförmige Masse austauschen.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#exchangeLiquid -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#exchangeLiquid">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeFluid"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange liquid.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme flüssige Masse austauschen.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#exchangeSolid -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#exchangeSolid">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeMass"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange solid.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme feste Masse austauschen.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#fluidServedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#fluidServedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#massServedBy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served fluid mass by a system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit flüssiger/gasförmiger Masse versorgt wird.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#fluidSuppliedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#fluidSuppliedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeFluid"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/bot#suppliesFluid"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has fluid mass supplied by the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige/gasförmige von einem anderen System zuführt bekommt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#gasServedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#gasServedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#fluidServedBy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served gaseous mass by a system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit gasförmiger Masse versorgt wird.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#gasSuppliedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#gasSuppliedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeGas"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/bot#suppliesGas"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has gaseous mass supplied by the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System gasförmige Masse von einem anderen System zuführt bekommt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#hasSubState -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#hasSubState">
-        <owl:inverseOf rdf:resource="https://w3id.org/bot#subStateOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#State"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#State"/>
-        <rdfs:comment xml:lang="en">A relationship linking a state to its sub state.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche einen Zustand mit dessen Subzustand verbindet.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#lightEnergyServedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#lightEnergyServedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#energyServedBy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served light energy by a system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Lichtenergie versorgt wird.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#liquidServedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#liquidServedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#fluidServedBy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served liquid mass by a system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit flüssiger Masse versorgt wird.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#liquidSuppliedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#liquidSuppliedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeLiquid"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/bot#suppliesLiquid"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has liquid mass supplied by the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige Masse von einem anderen System zuführt bekommt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#massServedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#massServedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servedBy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served mass by a system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Masse versorgt wird.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#massSuppliedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#massSuppliedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeMass"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/bot#suppliesMass"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has mass supplied by the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Masse von einem anderen System zuführt bekommt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#mechanicalEnergyServedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#mechanicalEnergyServedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#energyServedBy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served mechanical energy by a system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit mechanischer Energie versorgt wird.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#mechanicalEnergySuppliedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#mechanicalEnergySuppliedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeMechanicalEnergy"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/bot#suppliesMechanicalEnergy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has mechanical energy supplied by the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System mechanische Energie von einem anderen System zuführt bekommt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#servesData -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#servesData">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#serves"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves data to the zone.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Daten versorgt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#servesFluid -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#servesFluid">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servesMass"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves fluid mass to the zone.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer flüssigen/gasförmigen Masse versorgt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#servesGas -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#servesGas">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#servesFluid"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves gaseous mass to the zone.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer gasförmigen Masse versorgt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#servesLiquid -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#servesLiquid">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#servesFluid"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves liquid mass to the zone.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer flüssigen Masse versorgt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#servesMechanicalEnergy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#servesMechanicalEnergy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servesEnergy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves mechanical energy to the zone.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit mechanischer Energie versorgt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#solidServedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#solidServedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#massServedBy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served solid mass by a system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit fester Masse versorgt wird.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#solidSuppliedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#solidSuppliedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeSolid"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/bot#suppliesSolid"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has solid mass supplied by the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System feste Masse von einem anderen System zuführt bekommt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#soundEnergyServedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#soundEnergyServedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#energyServedBy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served sound energy by a system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Schallenergie versorgt wird.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#subStateOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#subStateOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#State"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#State"/>
-        <rdfs:comment xml:lang="en">A relationship linking a state to its super state.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche einen Zustand mit dessen Superzustand verbindet.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#suppliesData -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesData">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeData"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies data to the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Daten an das andere System zuführt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#suppliesElectricalEnergy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesElectricalEnergy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeElectricalEnergy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies electrical energy to the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System elektrische Energie an das andere System zuführt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#suppliesEnergy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesEnergy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeEnergy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies energy to the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Energie an das andere System zuführt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#suppliesFluid -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesFluid">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeFluid"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies fluid mass to the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige/gasförmige Masse an das andere System zuführt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#suppliesGas -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesGas">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeGas"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies gaseous mass to the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System gasförmige Masse an das andere System zuführt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#suppliesLiquid -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesLiquid">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeLiquid"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies liquid mass to the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige Masse an das andere System zuführt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#suppliesMass -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesMass">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeMass"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies mass to the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Masse an das andere System zuführt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#suppliesMechanicalEnergy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesMechanicalEnergy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeMechanicalEnergy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies mechanical energy to the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System mechanische Energie an das andere System zuführt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#suppliesSolid -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesSolid">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeSolid"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies solid mass to the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System feste Masse an das andere System zuführt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#suppliesThermalEnergy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesThermalEnergy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeThermalEnergy"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/bot#themalEnergySuppliedBy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies thermal energy to the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System thermische Energie an das andere System zuführt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#themalEnergySuppliedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#themalEnergySuppliedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeThermalEnergy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has energy supplied by the other.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System thermische Energie von einem anderen System zuführt bekommt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/bot#thermalEnergyServedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/bot#thermalEnergyServedBy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#energyServedBy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served thermal energy by a system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit thermischer Energie versorgt wird.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#connects -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#connects">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe their topological connection.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche System untereinander verbindet um deren topologische Verknüpfung zu beschreiben.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#exchangeData -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#exchangeData">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#connects"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange data.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme Daten austauschen.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#exchangeEnergy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#exchangeEnergy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#connects"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange energy.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme Energie austauschen.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#exchangeMass -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#exchangeMass">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#connects"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange mass.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme Masse austauschen.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#exchangeMechanicalEnergy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#exchangeMechanicalEnergy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeEnergy"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange mechanical energy.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme mechanische Energie austauschen.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#exchangeThermalEnergy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#exchangeThermalEnergy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeEnergy"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange thermal energy.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme thermische Energie austauschen.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#hasSink -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#hasSink">
-        <owl:inverseOf rdf:resource="https://w3id.org/tso#sinkOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship identifying the sink of a system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche die Senke eines Systems identifziert.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#hasSource -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#hasSource">
-        <owl:inverseOf rdf:resource="https://w3id.org/tso#sourceOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship identifying the source of a system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche die Quelle eines Systems identifiziert.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#hasState -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#hasState">
-        <owl:inverseOf rdf:resource="https://w3id.org/tso#stateOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#State"/>
-        <rdfs:comment xml:lang="en">A relationship identifying the state of a system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche den Zustand eines Systems identifiziert.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#hasSubSystem -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#hasSubSystem">
-        <owl:inverseOf rdf:resource="https://w3id.org/tso#subSystemOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a system to its sub system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit dessen Subsystem verbindet.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#servedBy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#servedBy">
-        <owl:inverseOf rdf:resource="https://w3id.org/tso#serves"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served by a system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System versorgt wird.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#serves -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#serves">
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves the zone.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone versorgt.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#servesElectricEnergy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#servesElectricEnergy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servesEnergy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves electrical energy to the zone.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit elektrischer Energie versorgt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#servesEnergy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#servesEnergy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#serves"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves energy to the zone.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Energie versorgt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#servesLightEnergy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#servesLightEnergy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servesEnergy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves light energy to the zone.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Lichtenergie versorgt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#servesMass -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#servesMass">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#serves"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves mass to the zone.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Masse versorgt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#servesSolid -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#servesSolid">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servesMass"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves solid mass to the zone.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit fester Masse versorgt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#servesSoundEnergy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#servesSoundEnergy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servesEnergy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves sound energy to the zone.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Schallenergie versorgt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#servesThermalEnergy -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#servesThermalEnergy">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servesEnergy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves thermal energy to the zone.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit thermischer Energie versorgt.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#sinkOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#sinkOf">
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship identifying the system of a sink.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche das dazugehörige System der Senke identifiziert.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#sourceOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#sourceOf">
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship identifying the system of a source.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche das dazugehörige System einer Quelle identifiziert.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#stateOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#stateOf">
-        <rdfs:domain rdf:resource="https://w3id.org/tso#State"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship identifying the system of a state.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche das dazugehörige System eines Zustand identifiziert.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/tso#subSystemOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/tso#subSystemOf">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A relationship linking a system to its super system.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit dessen Supersystem verbindet.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/tso#hasDataPointKey -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/tso#hasDataPointKey">
-        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
 
 
     <!-- 
@@ -986,235 +32,889 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
     <!-- https://w3id.org/bot#AutomationSystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#AutomationSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A system which distributes/stores/converts data for the purpose of automation and monitoring.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Daten zum Zweck der Automation und des Monitorings verteilt/speichert/konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/bot#ConversionSystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#ConversionSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A system which converts mass, energy and/or data.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Masse, Energie und/oder Daten konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/bot#CoolingSystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#CoolingSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A system which distributes/stores/converts thermal energy for the purpose of cooling.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches thermische Energie für den Zweck der Kühlung verteilt/speichert/konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/bot#DataSystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#DataSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A system which distributes/stores/converts data.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Daten verteilt/speichert/konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/bot#DistributionSystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#DistributionSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A system which distributes mass, energy and/or data.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Masse, Energie und/oder Daten verteilt.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/bot#DrainageSystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#DrainageSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A system which discharges mass.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Masse abführt.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/bot#ElectricalSystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#ElectricalSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A system which distributes/stores/converts electrical energy.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches elektrische Energie verteilt/speichert/konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/bot#EnergyConversionSystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#EnergyConversionSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/bot#ConversionSystem"/>
         <rdfs:comment xml:lang="en">A system which converts energy to another form of energy and/or data.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Energie in eine andere Form der Energie und/oder Daten konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/bot#FluidSystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#FluidSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A system which supplies/stores/converts fluid mass.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches gasförmige/flüssige Masse versorgt/speichert/konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/bot#HeatingCoolingSystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#HeatingCoolingSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A system which distributes/stores/converts thermal energy for the purpose of heating and/or cooling.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches thermische Energie für den Zweck der Heizung und/oder Kühlung verteilt/speichert/konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/bot#HeatingSystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#HeatingSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A system which distributes/stores/converts thermal energy for the purpose of heating.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches thermische Energie für den Zweck der Heizung verteilt/speichert/konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/bot#LightingSystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#LightingSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A system which supplies/stores/converts electrical energy for the purpose of lighting.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches elektrische Energie für den Zwecke der Beleuchtung versorgt/speichert/konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/bot#ReturnSystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#ReturnSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/bot#DistributionSystem"/>
         <rdfs:comment xml:lang="en">A system which returns mass, energy and/or data.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Masse, Energie und/oder Daten zurückführt.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/bot#SafetySystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#SafetySystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A system which protects from danger and damage.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches vor Gefahr und Schäden schützt.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/bot#StorageSystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#StorageSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A system which stores mass, energy and/or data.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Masse, Energie und/oder Daten speichert</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/bot#SupplySystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#SupplySystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/bot#DistributionSystem"/>
         <rdfs:comment xml:lang="en">A system which supplies mass, energy and/or data.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Masse, Energie und/oder Daten versorgt.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/bot#TreatmentSystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#TreatmentSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/bot#ConversionSystem"/>
         <rdfs:comment xml:lang="en">A system which converts/treats a flow.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Masse konvertiert/behandelt.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/bot#VentilationSystem -->
-
     <owl:Class rdf:about="https://w3id.org/bot#VentilationSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A system which supplies ventilation.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Ventilation versorgt.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/tso#State -->
-
     <owl:Class rdf:about="https://w3id.org/tso#State">
         <owl:disjointWith rdf:resource="https://w3id.org/tso#System"/>
         <owl:disjointWith rdf:resource="https://w3id.org/tso#Zone"/>
-        <rdfs:comment xml:lang="en">A state describes...</rdfs:comment>
-        <rdfs:comment xml:lang="de">Ein Zustand beschreibt...</rdfs:comment>
+        <rdfs:comment xml:lang="en">A state defines the internal condition of a planned or abstract system. This includes specific aspects as on, off, open or closed as well as general aspects such as outdoor-air-operation, mixed-air-operation or heating-operation.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein Zustand beschreibt die innere Verfassung eines geplanten oder abstrakten Systems. Dies umfasst spezifische Aspekte wie an, aus, offen oder geschlossen als auch übergreifende Aspekte wie zum Beispiel Frischluftbetrieb, Mischluftbetrieb oder Heizbetrieb.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/tso#System -->
-
     <owl:Class rdf:about="https://w3id.org/tso#System">
         <owl:disjointWith rdf:resource="https://w3id.org/tso#Zone"/>
         <rdfs:comment xml:lang="en">A system is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or subsystems and has links between attributes such as inputs, outputs and states.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System ist das Modell einer Ganzheit welches von seiner Umgebung bzw. einem Supersystems abgegrenzt ist, welches aus miteinander verknüpften Komponenten oder Subsystemen bestehen kann und Beziehungen zwischen Attributen wie Inputs, Outputs und Zuständen aufweist.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
     </owl:Class>
-    
-
 
     <!-- https://w3id.org/tso#Zone -->
-
     <owl:Class rdf:about="https://w3id.org/tso#Zone">
         <rdfs:comment xml:lang="en">A part of the physical world or a virtual world that is inherently both located in this world and has a 3D spatial extent.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein Teil der realen oder virtuellen Welt die beide Teil dieser Welt sind und eine räumliche Ausdehnung hat.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
     </owl:Class>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- http://purl.org/dc/terms/creator -->
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+
+    <!-- http://purl.org/dc/terms/description -->
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+
+    <!-- http://purl.org/dc/terms/issued -->
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+
+    <!-- http://purl.org/dc/terms/license -->
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+
+    <!-- http://purl.org/dc/terms/modified -->
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+
+    <!-- http://purl.org/dc/terms/title -->
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- https://w3id.org/bot#dataServedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#dataServedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servedBy"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served data by a system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Daten versorgt wird.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#dataSuppliedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#dataSuppliedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeData"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bot#suppliesData"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has data supplied by the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Daten von einem anderen System zuführt bekommt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#electricalEnergyServedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#electricalEnergyServedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#energyServedBy"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served electrical energy by a system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit elektrischer Energie versorgt wird.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#electricalEnergySuppliedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#electricalEnergySuppliedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeElectricalEnergy"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bot#suppliesElectricalEnergy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has electrical energy supplied by the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System elektrische Energie von einem anderen System zuführt bekommt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#energyServedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#energyServedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servedBy"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served energy by a system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Energie versorgt wird.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#energySuppliedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#energySuppliedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeEnergy"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/tso#exchangeEnergy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has energy supplied by the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Energie von einem anderen System zuführt bekommt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#exchangeElectricalEnergy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#exchangeElectricalEnergy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeEnergy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange electrical energy.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme elektrisch Energie austauschen.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#exchangeFluid -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#exchangeFluid">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeMass"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange fluid.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme flüssige/gasförmige Masse austauschen.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#exchangeGas -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#exchangeGas">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeFluid"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange gas.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme gasförmige Masse austauschen.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#exchangeLiquid -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#exchangeLiquid">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeFluid"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange liquid.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme flüssige Masse austauschen.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#exchangeSolid -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#exchangeSolid">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeMass"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange solid.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme feste Masse austauschen.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#fluidServedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#fluidServedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#massServedBy"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served fluid mass by a system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit flüssiger/gasförmiger Masse versorgt wird.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#fluidSuppliedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#fluidSuppliedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeFluid"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bot#suppliesFluid"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has fluid mass supplied by the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige/gasförmige von einem anderen System zuführt bekommt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#gasServedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#gasServedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#fluidServedBy"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served gaseous mass by a system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit gasförmiger Masse versorgt wird.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#gasSuppliedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#gasSuppliedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeGas"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bot#suppliesGas"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has gaseous mass supplied by the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System gasförmige Masse von einem anderen System zuführt bekommt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#hasSubState -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#hasSubState">
+        <owl:inverseOf rdf:resource="https://w3id.org/bot#subStateOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#State"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#State"/>
+        <rdfs:comment xml:lang="en">A relationship linking a state to its sub state.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche einen Zustand mit dessen Subzustand verbindet.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#lightEnergyServedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#lightEnergyServedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#energyServedBy"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served light energy by a system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Lichtenergie versorgt wird.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#liquidServedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#liquidServedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#fluidServedBy"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served liquid mass by a system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit flüssiger Masse versorgt wird.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#liquidSuppliedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#liquidSuppliedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeLiquid"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bot#suppliesLiquid"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has liquid mass supplied by the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige Masse von einem anderen System zuführt bekommt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#massServedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#massServedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servedBy"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served mass by a system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Masse versorgt wird.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#massSuppliedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#massSuppliedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeMass"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bot#suppliesMass"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has mass supplied by the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Masse von einem anderen System zuführt bekommt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#mechanicalEnergyServedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#mechanicalEnergyServedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#energyServedBy"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served mechanical energy by a system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit mechanischer Energie versorgt wird.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#mechanicalEnergySuppliedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#mechanicalEnergySuppliedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeMechanicalEnergy"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bot#suppliesMechanicalEnergy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has mechanical energy supplied by the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System mechanische Energie von einem anderen System zuführt bekommt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#servesData -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#servesData">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#serves"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves data to the zone.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Daten versorgt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#servesFluid -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#servesFluid">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servesMass"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves fluid mass to the zone.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer flüssigen/gasförmigen Masse versorgt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#servesGas -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#servesGas">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#servesFluid"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves gaseous mass to the zone.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer gasförmigen Masse versorgt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#servesLiquid -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#servesLiquid">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#servesFluid"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves liquid mass to the zone.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer flüssigen Masse versorgt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#servesMechanicalEnergy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#servesMechanicalEnergy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servesEnergy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves mechanical energy to the zone.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit mechanischer Energie versorgt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#solidServedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#solidServedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#massServedBy"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served solid mass by a system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit fester Masse versorgt wird.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#solidSuppliedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#solidSuppliedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeSolid"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bot#suppliesSolid"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has solid mass supplied by the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System feste Masse von einem anderen System zuführt bekommt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#soundEnergyServedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#soundEnergyServedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#energyServedBy"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served sound energy by a system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Schallenergie versorgt wird.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#subStateOf -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#subStateOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#State"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#State"/>
+        <rdfs:comment xml:lang="en">A relationship linking a state to its super state.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche einen Zustand mit dessen Superzustand verbindet.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#suppliesData -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesData">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeData"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies data to the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Daten an das andere System zuführt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#suppliesElectricalEnergy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesElectricalEnergy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeElectricalEnergy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies electrical energy to the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System elektrische Energie an das andere System zuführt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#suppliesEnergy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesEnergy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeEnergy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies energy to the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Energie an das andere System zuführt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#suppliesFluid -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesFluid">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeFluid"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies fluid mass to the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige/gasförmige Masse an das andere System zuführt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#suppliesGas -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesGas">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeGas"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies gaseous mass to the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System gasförmige Masse an das andere System zuführt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#suppliesLiquid -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesLiquid">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeLiquid"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies liquid mass to the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige Masse an das andere System zuführt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#suppliesMass -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesMass">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeMass"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies mass to the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Masse an das andere System zuführt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#suppliesMechanicalEnergy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesMechanicalEnergy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeMechanicalEnergy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies mechanical energy to the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System mechanische Energie an das andere System zuführt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#suppliesSolid -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesSolid">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#exchangeSolid"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies solid mass to the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System feste Masse an das andere System zuführt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#suppliesThermalEnergy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#suppliesThermalEnergy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeThermalEnergy"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/bot#themalEnergySuppliedBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system supplies thermal energy to the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System thermische Energie an das andere System zuführt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#themalEnergySuppliedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#themalEnergySuppliedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeThermalEnergy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that one system has energy supplied by the other.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System thermische Energie von einem anderen System zuführt bekommt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/bot#thermalEnergyServedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#thermalEnergyServedBy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#energyServedBy"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served thermal energy by a system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit thermischer Energie versorgt wird.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#connects -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#connects">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe their topological connection.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche System untereinander verbindet um deren topologische Verknüpfung zu beschreiben.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#exchangeData -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#exchangeData">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#connects"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange data.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme Daten austauschen.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#exchangeEnergy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#exchangeEnergy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#connects"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange energy.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme Energie austauschen.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#exchangeMass -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#exchangeMass">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#connects"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange mass.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme Masse austauschen.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#exchangeMechanicalEnergy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#exchangeMechanicalEnergy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeEnergy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange mechanical energy.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme mechanische Energie austauschen.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#exchangeThermalEnergy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#exchangeThermalEnergy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#exchangeEnergy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking systems to describe that the systems exchange thermal energy.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme thermische Energie austauschen.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#hasSink -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#hasSink">
+        <owl:inverseOf rdf:resource="https://w3id.org/tso#sinkOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the sink of a system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche die Senke eines Systems identifziert.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#hasSource -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#hasSource">
+        <owl:inverseOf rdf:resource="https://w3id.org/tso#sourceOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the source of a system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche die Quelle eines Systems identifiziert.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#hasState -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#hasState">
+        <owl:inverseOf rdf:resource="https://w3id.org/tso#stateOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#State"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the state of a system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche den Zustand eines Systems identifiziert.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#hasSubSystem -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#hasSubSystem">
+        <owl:inverseOf rdf:resource="https://w3id.org/tso#subSystemOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a system to its sub system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit dessen Subsystem verbindet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#servedBy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#servedBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/tso#serves"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a zone to a system to describe that the zone is served by a system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System versorgt wird.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#serves -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#serves">
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves the zone.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone versorgt.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#servesElectricEnergy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#servesElectricEnergy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servesEnergy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves electrical energy to the zone.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit elektrischer Energie versorgt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#servesEnergy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#servesEnergy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#serves"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves energy to the zone.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Energie versorgt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#servesLightEnergy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#servesLightEnergy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servesEnergy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves light energy to the zone.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Lichtenergie versorgt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#servesMass -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#servesMass">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#serves"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves mass to the zone.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Masse versorgt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#servesSolid -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#servesSolid">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servesMass"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves solid mass to the zone.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit fester Masse versorgt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#servesSoundEnergy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#servesSoundEnergy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servesEnergy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves sound energy to the zone.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Schallenergie versorgt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#servesThermalEnergy -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#servesThermalEnergy">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#servesEnergy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a system to a zone to describe that the system serves thermal energy to the zone.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit thermischer Energie versorgt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#sinkOf -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#sinkOf">
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the system of a sink.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche das dazugehörige System der Senke identifiziert.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#sourceOf -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#sourceOf">
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the system of a source.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche das dazugehörige System einer Quelle identifiziert.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#stateOf -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#stateOf">
+        <rdfs:domain rdf:resource="https://w3id.org/tso#State"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship identifying the system of a state.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche das dazugehörige System eines Zustand identifiziert.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+    </owl:ObjectProperty>
+
+    <!-- https://w3id.org/tso#subSystemOf -->
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#subSystemOf">
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship linking a system to its super system.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche ein System mit dessen Supersystem verbindet.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+    </owl:ObjectProperty>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- https://w3id.org/tso#hasDataPointKey -->
+    <owl:DatatypeProperty rdf:about="https://w3id.org/tso#hasDataPointKey">
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
 </rdf:RDF>
