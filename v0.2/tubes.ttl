@@ -10,6 +10,8 @@
 
 @prefix tso: <https://w3id.org/tso#> .
 
+@base <https://w3id.org/tso#> .
+
 
 dc:title a owl:AnnotationProperty .
 dc:description a owl:AnnotationProperty .
@@ -37,700 +39,689 @@ tso: a owl:Ontology ;
     vann:preferredNamespaceUri <https://w3id.org/tso#> .
 
 
-tso:AutomationSystem
-    a owl:Class ;
-    rdfs:subClassOf tso:System ;
-    rdfs:comment "A system which distributes/stores/converts data for the purpose of automation and monitoring."@en, "Ein System, welches Daten zum Zweck der Automation und des Monitorings verteilt/speichert/konvertiert."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:ConversionSystem
-    a owl:Class ;
-    rdfs:subClassOf tso:System ;
-    rdfs:comment "A system which converts mass, energy and/or data."@en, "Ein System, welches Masse, Energie und/oder Daten konvertiert."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:CoolingSystem
-    a owl:Class ;
-    rdfs:subClassOf tso:System ;
-    rdfs:comment "A system which distributes/stores/converts thermal energy for the purpose of cooling."@en, "Ein System, welches thermische Energie für den Zweck der Kühlung verteilt/speichert/konvertiert."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:DataSystem
-    a owl:Class ;
-    rdfs:subClassOf tso:System ;
-    rdfs:comment "A system which distributes/stores/converts data."@en, "Ein System, welches Daten verteilt/speichert/konvertiert."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:DistributionSystem
-    a owl:Class ;
-    rdfs:subClassOf tso:System ;
-    rdfs:comment "A system which distributes mass, energy and/or data."@en, "Ein System, welches Masse, Energie und/oder Daten verteilt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:DrainageSystem
-    a owl:Class ;
-    rdfs:subClassOf tso:System ;
-    rdfs:comment "A system which discharges mass."@en, "Ein System, welches Masse abführt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:ElectricalSystem
-    a owl:Class ;
-    rdfs:subClassOf tso:System ;
-    rdfs:comment "A system which distributes/stores/converts electrical energy."@en, "Ein System, welches elektrische Energie verteilt/speichert/konvertiert."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:EnergyConversionSystem
-    a owl:Class ;
-    rdfs:subClassOf tso:ConversionSystem ;
-    rdfs:comment "A system which converts energy to another form of energy and/or data."@en, "Ein System, welches Energie in eine andere Form der Energie und/oder Daten konvertiert."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:FluidSystem
-    a owl:Class ;
-    rdfs:subClassOf tso:System ;
-    rdfs:comment "A system which supplies/stores/converts fluid mass."@en, "Ein System, welches gasförmige/flüssige Masse versorgt/speichert/konvertiert."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:HeatingCoolingSystem
-    a owl:Class ;
-    rdfs:subClassOf tso:System ;
-    rdfs:comment "A system which distributes/stores/converts thermal energy for the purpose of heating and/or cooling."@en, "Ein System, welches thermische Energie für den Zweck der Heizung und/oder Kühlung verteilt/speichert/konvertiert."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:HeatingSystem
-    a owl:Class ;
-    rdfs:subClassOf tso:System ;
-    rdfs:comment "A system which distributes/stores/converts thermal energy for the purpose of heating."@en, "Ein System, welches thermische Energie für den Zweck der Heizung verteilt/speichert/konvertiert."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:LightingSystem
-    a owl:Class ;
-    rdfs:subClassOf tso:System ;
-    rdfs:comment "A system which supplies/stores/converts electrical energy for the purpose of lighting."@en, "Ein System, welches elektrische Energie für den Zwecke der Beleuchtung versorgt/speichert/konvertiert."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:ReturnSystem
-    a owl:Class ;
-    rdfs:subClassOf tso:DistributionSystem ;
-    rdfs:comment "A system which returns mass, energy and/or data."@en, "Ein System, welches Masse, Energie und/oder Daten zurückführt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:SafetySystem
-    a owl:Class ;
-    rdfs:subClassOf tso:System ;
-    rdfs:comment "A system which protects from danger and damage."@en, "Ein System, welches vor Gefahr und Schäden schützt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:StorageSystem
-    a owl:Class ;
-    rdfs:subClassOf tso:System ;
-    rdfs:comment "A system which stores mass, energy and/or data."@en, "Ein System, welches Masse, Energie und/oder Daten speichert"@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:SupplySystem
-    a owl:Class ;
-    rdfs:subClassOf tso:DistributionSystem ;
-    rdfs:comment "A system which supplies mass, energy and/or data."@en, "Ein System, welches Masse, Energie und/oder Daten versorgt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:TreatmentSystem
-    a owl:Class ;
-    rdfs:subClassOf tso:ConversionSystem ;
-    rdfs:comment "A system which converts/treats a flow."@en, "Ein System, welches Masse konvertiert/behandelt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:VentilationSystem
-    a owl:Class ;
-    rdfs:subClassOf tso:System ;
-    rdfs:comment "A system which supplies ventilation."@en, "Ein System, welches Ventilation versorgt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:State
-    a owl:Class ;
-    owl:disjointWith tso:System, tso:Zone ;
-    rdfs:comment "A state defines the internal condition of a planned or abstract system. This includes specific aspects as on, off, open or closed as well as general aspects such as outdoor-air-operation, mixed-air-operation or heating-operation."@en, "Ein Zustand beschreibt die innere Verfassung eines geplanten oder abstrakten Systems. Dies umfasst spezifische Aspekte wie an, aus, offen oder geschlossen als auch übergreifende Aspekte wie zum Beispiel Frischluftbetrieb, Mischluftbetrieb oder Heizbetrieb."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:System
-    a owl:Class ;
+tso:System a owl:Class ;
     owl:disjointWith tso:Zone ;
-    rdfs:comment "A system is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or subsystems and has links between attributes such as inputs, outputs and states."@en, "Ein System ist das Modell einer Ganzheit welches von seiner Umgebung bzw. einem Supersystems abgegrenzt ist, welches aus miteinander verknüpften Komponenten oder Subsystemen bestehen kann und Beziehungen zwischen Attributen wie Inputs, Outputs und Zuständen aufweist."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A system is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or subsystems and has links between attributes such as inputs, outputs and states."@en , "Ein System ist das Modell einer Ganzheit welches von seiner Umgebung bzw. einem Supersystems abgegrenzt ist, welches aus miteinander verknüpften Komponenten oder Subsystemen bestehen kann und Beziehungen zwischen Attributen wie Inputs, Outputs und Zuständen aufweist."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "System"@de , "System"@en .
 
-tso:Zone
-    a owl:Class ;
-    rdfs:comment "A part of the physical world or a virtual world that is inherently both located in this world and has a 3D spatial extent."@en, "Ein Teil der realen oder virtuellen Welt die beide Teil dieser Welt sind und eine räumliche Ausdehnung hat."@de ;
-    rdfs:isDefinedBy tso: .
+tso:Zone a owl:Class ;
+    rdfs:comment "A part of the physical world or a virtual world that is inherently both located in this world and has a 3D spatial extent."@en , "Ein Teil der realen oder virtuellen Welt die beide Teil dieser Welt sind und eine räumliche Ausdehnung hat."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Zone"@de , "Zone"@en .
+
+tso:State a owl:Class ;
+    owl:disjointWith tso:System , tso:Zone ;
+    rdfs:comment "A state defines the internal condition of a planned or abstract system. This includes specific aspects as on, off, open or closed as well as general aspects such as outdoor-air-operation, mixed-air-operation or heating-operation."@en , "Ein Zustand beschreibt die innere Verfassung eines geplanten oder abstrakten Systems. Dies umfasst spezifische Aspekte wie an, aus, offen oder geschlossen als auch übergreifende Aspekte wie zum Beispiel Frischluftbetrieb, Mischluftbetrieb oder Heizbetrieb."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "State"@en , "Zustand"@de .
+
+tso:AutomationSystem a owl:Class ;
+    rdfs:subClassOf tso:System ;
+    rdfs:comment "A system which distributes/stores/converts data for the purpose of automation and monitoring."@en ,"Ein System, welches Daten zum Zweck der Automation und des Monitorings verteilt/speichert/konvertiert."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Automation System"@en , "Automatisierungssystem"@de .
+
+tso:ConversionSystem a owl:Class ;
+    rdfs:subClassOf tso:System ;
+    rdfs:comment "A system which converts mass, energy and/or data."@en , "Ein System, welches Masse, Energie und/oder Daten konvertiert."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Conversion System"@en , "Wandlungssystem"@de .
+
+tso:CoolingSystem a owl:Class ;
+    rdfs:subClassOf tso:System ;
+    rdfs:comment "A system which distributes/stores/converts thermal energy for the purpose of cooling."@en , "Ein System, welches thermische Energie für den Zweck der Kühlung verteilt/speichert/konvertiert."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Cooling System"@en , "Kühlsystem"@de .
+
+tso:DataSystem a owl:Class ;
+    rdfs:subClassOf tso:System ;
+    rdfs:comment "A system which distributes/stores/converts data."@en , "Ein System, welches Daten verteilt/speichert/konvertiert."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Data System"@en , "Datensystem"@de .
+
+tso:DistributionSystem a owl:Class ;
+    rdfs:subClassOf tso:System ;
+    rdfs:comment "A system which distributes mass, energy and/or data."@en , "Ein System, welches Masse, Energie und/oder Daten verteilt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Distribution System"@en , "Verteilungssystem"@de .
+
+tso:DrainageSystem a owl:Class ;
+    rdfs:subClassOf tso:System ;
+    rdfs:comment "A system which discharges mass."@en , "Ein System, welches Masse abführt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Abflusssystem"@de , "Drainage System"@en .
+
+tso:ElectricalSystem a owl:Class ;
+    rdfs:subClassOf tso:System ;
+    rdfs:comment "A system which distributes/stores/converts electrical energy."@en , "Ein System, welches elektrische Energie verteilt/speichert/konvertiert."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Electrical System"@en , "Elektroniksystem"@de .
+
+tso:EnergyConversionSystem a owl:Class ;
+    rdfs:subClassOf tso:ConversionSystem ;
+    rdfs:comment "A system which converts energy to another form of energy and/or data."@en , "Ein System, welches Energie in eine andere Form der Energie und/oder Daten konvertiert."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Energiewandlungssystem"@de , "Energy Conversion System"@en .
+
+tso:FluidSystem a owl:Class ;
+    rdfs:subClassOf tso:System ;
+    rdfs:comment "A system which supplies/stores/converts fluid mass."@en , "Ein System, welches gasförmige/flüssige Masse versorgt/speichert/konvertiert."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Fluid System"@en , "Strömungssystem"@de .
+
+tso:HeatingCoolingSystem a owl:Class ;
+    rdfs:subClassOf tso:System ;
+    rdfs:comment "A system which distributes/stores/converts thermal energy for the purpose of heating and/or cooling."@en , "Ein System, welches thermische Energie für den Zweck der Heizung und/oder Kühlung verteilt/speichert/konvertiert."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Heating Cooling System"@en , "Heiz- und Kühlsystem"@de .
+
+tso:HeatingSystem a owl:Class ;
+    rdfs:subClassOf tso:System ;
+    rdfs:comment "A system which distributes/stores/converts thermal energy for the purpose of heating."@en , "Ein System, welches thermische Energie für den Zweck der Heizung verteilt/speichert/konvertiert."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Heating System"@en , "Heizsystem"@de .
+
+tso:LightingSystem a owl:Class ;
+    rdfs:subClassOf tso:System ;
+    rdfs:comment "A system which supplies/stores/converts electrical energy for the purpose of lighting."@en , "Ein System, welches elektrische Energie für den Zwecke der Beleuchtung versorgt/speichert/konvertiert."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Beleuchtungssystem"@de , "Lighting System"@en .
+
+tso:ReturnSystem a owl:Class ;
+    rdfs:subClassOf tso:DistributionSystem ;
+    rdfs:comment "A system which returns mass, energy and/or data."@en , "Ein System, welches Masse, Energie und/oder Daten zurückführt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Return System"@en , "Rückführungssystem"@de .
+
+tso:SafetySystem a owl:Class ;
+    rdfs:subClassOf tso:System ;
+    rdfs:comment "A system which protects from danger and damage."@en , "Ein System, welches vor Gefahr und Schäden schützt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Safety System"@en , "Sicherheitssystem"@de .
+
+tso:StorageSystem a owl:Class ;
+    rdfs:subClassOf tso:System ;
+    rdfs:comment "A system which stores mass, energy and/or data."@en , "Ein System, welches Masse, Energie und/oder Daten speichert"@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Speichersystem"@de , "Storage System"@en .
+
+tso:SupplySystem a owl:Class ;
+    rdfs:subClassOf tso:DistributionSystem ;
+    rdfs:comment "A system which supplies mass, energy and/or data."@en , "Ein System, welches Masse, Energie und/oder Daten versorgt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Supply System"@en , "Versorgungssystem"@de .
+
+tso:TreatmentSystem a owl:Class ;
+    rdfs:subClassOf tso:ConversionSystem ;
+    rdfs:comment "A system which converts/treats a flow."@en , "Ein System, welches Masse konvertiert/behandelt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Bearbeitungssystem"@de , "Treatment System"@en .
+
+tso:VentilationSystem a owl:Class ;
+    rdfs:subClassOf tso:System ;
+    rdfs:comment "A system which supplies ventilation."@en , "Ein System, welches Ventilation versorgt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Belüftungssystem"@de , "Ventilation System"@en .
 
 
-tso:dataServedBy
-    a owl:ObjectProperty ;
+tso:connects a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking systems to describe their topological connection."@en , "Eine Beziehung, welche System untereinander verbindet um deren topologische Verknüpfung zu beschreiben."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "connects"@en , "verbindet"@de .
+
+tso:dataServedBy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:servedBy ;
     owl:inverseOf tso:servesData ;
     rdfs:domain tso:Zone ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served data by a system."@en, "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Daten versorgt wird."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served data by a system."@en , "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Daten versorgt wird."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "data served by"@en , "versorgt mit Daten von"@de .
 
-tso:dataSuppliedBy
-    a owl:ObjectProperty ;
+tso:dataSuppliedBy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:exchangeData ;
     owl:inverseOf tso:suppliesData ;
     rdfs:domain tso:System ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system has data supplied by the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Daten von einem anderen System zuführt bekommt."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking systems to describe that one system has data supplied by the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Daten von einem anderen System zuführt bekommt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "bekommt Daten zugeführt"@de , "data supplied by"@en .
 
-tso:electricalEnergyServedBy
-    a owl:ObjectProperty ;
+tso:electricalEnergyServedBy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:energyServedBy ;
-    owl:inverseOf tso:servesElectricalEnergy;
+    owl:inverseOf tso:servesElectricalEnergy ;
     rdfs:domain tso:Zone ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served electrical energy by a system."@en, "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit elektrischer Energie versorgt wird."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served electrical energy by a system."@en , "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit elektrischer Energie versorgt wird."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "electrical energy served by"@en , "versorgt mit elektrischer Energie von"@de .
 
-tso:electricalEnergySuppliedBy
-    a owl:ObjectProperty ;
+tso:electricalEnergySuppliedBy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:exchangeElectricalEnergy ;
     owl:inverseOf tso:suppliesElectricalEnergy ;
     rdfs:domain tso:System ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system has electrical energy supplied by the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System elektrische Energie von einem anderen System zuführt bekommt."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking systems to describe that one system has electrical energy supplied by the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System elektrische Energie von einem anderen System zuführt bekommt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "bekommt elektrische Energie zugeführt"@de , "electrical energy supplied by"@en .
 
-tso:energyServedBy
-    a owl:ObjectProperty ;
+tso:energyServedBy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:servedBy ;
-    owl:inverseOf tso:serves ;
+    owl:inverseOf tso:servesEnergy ;
     rdfs:domain tso:Zone ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served energy by a system."@en, "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Energie versorgt wird."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served energy by a system."@en , "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Energie versorgt wird."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "energy served by"@en , "versorgt mit Energie von"@de .
 
-tso:energySuppliedBy
-    a owl:ObjectProperty ;
+tso:energySuppliedBy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:exchangeEnergy ;
     owl:inverseOf tso:suppliesEnergy ;
     rdfs:domain tso:System ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system has energy supplied by the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Energie von einem anderen System zuführt bekommt."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking systems to describe that one system has energy supplied by the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Energie von einem anderen System zuführt bekommt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "bekommt Energie zugeführt"@de , "energy supplied by"@en .
 
-tso:exchangeElectricalEnergy
-    a owl:ObjectProperty, owl:SymmetricProperty ;
+tso:exchangeData a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:subPropertyOf tso:connects ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking systems to describe that the systems exchange data."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme Daten austauschen."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "exchange data"@en , "tauscht Daten aus"@de .
+
+tso:exchangeElectricalEnergy a owl:ObjectProperty , owl:SymmetricProperty ;
     rdfs:subPropertyOf tso:exchangeEnergy ;
     rdfs:domain tso:System ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that the systems exchange electrical energy."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme elektrisch Energie austauschen."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking systems to describe that the systems exchange electrical energy."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme elektrisch Energie austauschen."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "exchange electrical energy"@en , "tauscht elektrische Energie aus"@de .
 
-tso:exchangeFluid
-    a owl:ObjectProperty, owl:SymmetricProperty ;
-    rdfs:subPropertyOf tso:exchangeMass ;
+tso:exchangeEnergy a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:subPropertyOf tso:connects ;
     rdfs:domain tso:System ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that the systems exchange fluid."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme flüssige/gasförmige Masse austauschen."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking systems to describe that the systems exchange energy."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme Energie austauschen."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "exchange energy"@en , "tauscht Energie aus"@de .
 
-tso:exchangeGas
-    a owl:ObjectProperty, owl:SymmetricProperty ;
+tso:exchangeFluid a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:subPropertyOf tso:exchangeMass ;
+
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking systems to describe that the systems exchange fluid."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme flüssige/gasförmige Masse austauschen."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "exchange fluid"@en , "tauscht flüssige/gasförmige Masse aus"@de .
+
+tso:exchangeGas a owl:ObjectProperty , owl:SymmetricProperty ;
     rdfs:subPropertyOf tso:exchangeFluid ;
     rdfs:domain tso:System ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that the systems exchange gas."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme gasförmige Masse austauschen."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking systems to describe that the systems exchange gas."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme gasförmige Masse austauschen."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "exchange gas"@en , "tauscht gasförmige Masse aus"@de .
 
-tso:exchangeLiquid
-    a owl:ObjectProperty, owl:SymmetricProperty ;
+tso:exchangeLiquid a owl:ObjectProperty , owl:SymmetricProperty ;
     rdfs:subPropertyOf tso:exchangeFluid ;
     rdfs:domain tso:System ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that the systems exchange liquid."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme flüssige Masse austauschen."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking systems to describe that the systems exchange liquid."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme flüssige Masse austauschen."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "exchange liquid"@en , "tauscht flüssige Masse aus"@de .
 
-tso:exchangeSolid
-    a owl:ObjectProperty, owl:SymmetricProperty ;
+tso:exchangeMass a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:subPropertyOf tso:connects ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking systems to describe that the systems exchange mass."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme Masse austauschen."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "exchange mass"@en , "tauscht Masse aus"@de .
+
+tso:exchangeMechanicalEnergy a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:subPropertyOf tso:exchangeEnergy ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking systems to describe that the systems exchange mechanical energy."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme mechanische Energie austauschen."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "exchange mechanical energy"@en , "tauscht mechanische Energie aus"@de .
+
+tso:exchangeSolid a owl:ObjectProperty , owl:SymmetricProperty ;
     rdfs:subPropertyOf tso:exchangeMass ;
     rdfs:domain tso:System ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that the systems exchange solid."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme feste Masse austauschen."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking systems to describe that the systems exchange solid."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme feste Masse austauschen."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "exchange solid"@en , "tauscht feste Masse aus"@de .
 
-tso:fluidServedBy
-    a owl:ObjectProperty ;
+tso:exchangeThermalEnergy a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:subPropertyOf tso:exchangeEnergy ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking systems to describe that the systems exchange thermal energy."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme thermische Energie austauschen."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "exchange thermal energy"@en , "tauscht thermische Energie aus"@de .
+
+tso:fluidServedBy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:massServedBy ;
     owl:inverseOf tso:servesFluid ;
     rdfs:domain tso:Zone ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served fluid mass by a system."@en, "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit flüssiger/gasförmiger Masse versorgt wird."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served fluid mass by a system."@en , "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit flüssiger/gasförmiger Masse versorgt wird."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "fluid served by"@en , "versorgt mit flüssiger/gasförmiger Masse von"@de .
 
-tso:fluidSuppliedBy
-    a owl:ObjectProperty ;
+tso:fluidSuppliedBy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:exchangeFluid ;
     owl:inverseOf tso:suppliesFluid ;
     rdfs:domain tso:System ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system has fluid mass supplied by the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige/gasförmige von einem anderen System zuführt bekommt."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking systems to describe that one system has fluid mass supplied by the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige/gasförmige von einem anderen System zuführt bekommt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "bekommt flüssige/gasförmige Masse zugeführt"@de , "fluid supplied by"@en .
 
-tso:gasServedBy
-    a owl:ObjectProperty ;
+tso:gasServedBy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:fluidServedBy ;
     owl:inverseOf tso:servesGas ;
     rdfs:domain tso:Zone ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served gaseous mass by a system."@en, "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit gasförmiger Masse versorgt wird."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served gaseous mass by a system."@en , "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit gasförmiger Masse versorgt wird."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "gas served by"@en , "versorgt mit gasförmiger Masse von"@de .
 
-tso:gasSuppliedBy
-    a owl:ObjectProperty ;
+tso:gasSuppliedBy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:exchangeGas ;
     owl:inverseOf tso:suppliesGas ;
     rdfs:domain tso:System ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system has gaseous mass supplied by the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System gasförmige Masse von einem anderen System zuführt bekommt."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking systems to describe that one system has gaseous mass supplied by the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System gasförmige Masse von einem anderen System zuführt bekommt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "bekommt gasförmige Masse zugeführt"@de , "gas supplied by"@en .
 
-tso:hasSubState
-    a owl:ObjectProperty, owl:TransitiveProperty ;
+tso:hasSink a owl:ObjectProperty ;
+    owl:inverseOf tso:sinkOf ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship identifying the sink of a system."@en , "Eine Beziehung, welche die Senke eines Systems identifziert."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "has sink"@en , "hat Senke"@de .
+
+tso:hasSource a owl:ObjectProperty ;
+    owl:inverseOf tso:sourceOf ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship identifying the source of a system."@en , "Eine Beziehung, welche die Quelle eines Systems identifiziert."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "has source"@en , "hat Quelle"@de .
+
+tso:hasState a owl:ObjectProperty ;
+    owl:inverseOf tso:stateOf ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:State ;
+    rdfs:comment "A relationship identifying the state of a system."@en , "Eine Beziehung, welche den Zustand eines Systems identifiziert."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "has state"@en , "hat Zustand"@de .
+
+tso:hasSubState a owl:ObjectProperty , owl:TransitiveProperty;
     owl:inverseOf tso:subStateOf ;
     rdfs:domain tso:State ;
     rdfs:range tso:State ;
-    rdfs:comment "A relationship linking a state to its sub state."@en, "Eine Beziehung, welche einen Zustand mit dessen Subzustand verbindet."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a state to its sub state."@en , "Eine Beziehung, welche einen Zustand mit dessen Subzustand verbindet."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "has sub state"@en , "hat Subzustand"@de .
 
-tso:lightEnergyServedBy
-    a owl:ObjectProperty ;
+tso:hasSubSystem a owl:ObjectProperty ;
+    owl:inverseOf tso:subSystemOf ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking a system to its sub system."@en , "Eine Beziehung, welche ein System mit dessen Subsystem verbindet."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "has sub system"@en , "hat Subsystem"@de .
+
+tso:lightEnergyServedBy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:energyServedBy ;
     owl:inverseOf tso:servesLightEnergy ;
     rdfs:domain tso:Zone ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served light energy by a system."@en, "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Lichtenergie versorgt wird."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served light energy by a system."@en , "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Lichtenergie versorgt wird."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "light energy served by"@en , "versorgt mit Lichtenergie von"@de .
 
-tso:liquidServedBy
-    a owl:ObjectProperty ;
+tso:liquidServedBy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:fluidServedBy ;
     owl:inverseOf tso:servesLiquid ;
     rdfs:domain tso:Zone ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served liquid mass by a system."@en, "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit flüssiger Masse versorgt wird."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served liquid mass by a system."@en , "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit flüssiger Masse versorgt wird."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "liquid served by"@en , "versorgt mit flüssiger Masse von"@de .
 
-tso:liquidSuppliedBy
-    a owl:ObjectProperty ;
+tso:liquidSuppliedBy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:exchangeLiquid ;
     owl:inverseOf tso:suppliesLiquid ;
     rdfs:domain tso:System ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system has liquid mass supplied by the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige Masse von einem anderen System zuführt bekommt."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking systems to describe that one system has liquid mass supplied by the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige Masse von einem anderen System zuführt bekommt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "bekommt flüssige Masse zugeführt"@de , "liquid supplied by"@en .
 
-tso:massServedBy
-    a owl:ObjectProperty ;
+tso:massServedBy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:servedBy ;
     owl:inverseOf tso:servesMass ;
     rdfs:domain tso:Zone ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served mass by a system."@en, "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Masse versorgt wird."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served mass by a system."@en , "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Masse versorgt wird."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "mass served by"@en , "versorgt mit Masse von"@de .
 
-tso:massSuppliedBy
-    a owl:ObjectProperty ;
+tso:massSuppliedBy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:exchangeMass ;
     owl:inverseOf tso:suppliesMass ;
     rdfs:domain tso:System ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system has mass supplied by the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Masse von einem anderen System zuführt bekommt."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking systems to describe that one system has mass supplied by the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Masse von einem anderen System zuführt bekommt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "bekommt Masse zugeführt"@de , "mass supplied by"@en .
 
-tso:mechanicalEnergyServedBy
-    a owl:ObjectProperty ;
+tso:mechanicalEnergyServedBy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:energyServedBy ;
     owl:inverseOf tso:servesMechanicalEnergy ;
     rdfs:domain tso:Zone ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served mechanical energy by a system."@en, "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit mechanischer Energie versorgt wird."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served mechanical energy by a system."@en , "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit mechanischer Energie versorgt wird."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "mechanical energy served by"@en , "versorgt mit mechanischer Energie von"@de .
 
-tso:mechanicalEnergySuppliedBy
-    a owl:ObjectProperty ;
+tso:mechanicalEnergySuppliedBy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:exchangeMechanicalEnergy ;
     owl:inverseOf tso:suppliesMechanicalEnergy ;
     rdfs:domain tso:System ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system has mechanical energy supplied by the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System mechanische Energie von einem anderen System zuführt bekommt."@de ;
+    rdfs:label "bekommt mechanische Energie zugeführt"@de , "mechanical energy supplied by"@en ;
+    rdfs:comment "A relationship linking systems to describe that one system has mechanical energy supplied by the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System mechanische Energie von einem anderen System zuführt bekommt."@de ;
     rdfs:isDefinedBy tso: .
 
-tso:servesData
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:serves ;
-    owl:inverseOf tso:dataServedBy ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:Zone ;
-    rdfs:comment "A relationship linking a system to a zone to describe that the system serves data to the zone."@en, "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Daten versorgt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:servesFluid
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:servesMass ;
-    owl:inverseOf tso:fluidServedBy ;
-    rdfs:range tso:Zone ;
-    rdfs:domain tso:System ;
-    rdfs:comment "A relationship linking a system to a zone to describe that the system serves fluid mass to the zone."@en, "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer flüssigen/gasförmigen Masse versorgt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:servesGas
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:servesFluid ;
-    owl:inverseOf tso:gasServedBy ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:Zone ;
-    rdfs:comment "A relationship linking a system to a zone to describe that the system serves gaseous mass to the zone."@en, "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer gasförmigen Masse versorgt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:servesLiquid
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:servesFluid ;
-    owl:inverseOf tso:liquidServedBy ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:Zone ;
-    rdfs:comment "A relationship linking a system to a zone to describe that the system serves liquid mass to the zone."@en, "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer flüssigen Masse versorgt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:servesMechanicalEnergy
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:servesEnergy ;
-    owl:inverseOf tso:mechanicalEnergyServedBy ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:Zone ;
-    rdfs:comment "A relationship linking a system to a zone to describe that the system serves mechanical energy to the zone."@en, "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit mechanischer Energie versorgt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:solidServedBy
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:massServedBy ;
-    owl:inverseOf tso:servesSolid ;
-    rdfs:domain tso:Zone ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served solid mass by a system."@en, "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit fester Masse versorgt wird."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:solidSuppliedBy
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:exchangeSolid ;
-    owl:inverseOf tso:suppliesSolid ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system has solid mass supplied by the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System feste Masse von einem anderen System zuführt bekommt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:soundEnergyServedBy
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:energyServedBy ;
-    owl:inverseOf tso:servesSoundEnergy ;
-    rdfs:domain tso:Zone ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served sound energy by a system."@en, "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Schallenergie versorgt wird."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:subStateOf
-    a owl:ObjectProperty, owl:TransitiveProperty ;
-    rdfs:domain tso:State ;
-    rdfs:range tso:State ;
-    rdfs:comment "A relationship linking a state to its super state."@en, "Eine Beziehung, welche einen Zustand mit dessen Superzustand verbindet."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:suppliesData
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:exchangeData ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system supplies data to the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Daten an das andere System zuführt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:suppliesElectricalEnergy
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:exchangeElectricalEnergy ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system supplies electrical energy to the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System elektrische Energie an das andere System zuführt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:suppliesEnergy
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:exchangeEnergy ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system supplies energy to the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Energie an das andere System zuführt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:suppliesFluid
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:exchangeFluid ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system supplies fluid mass to the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige/gasförmige Masse an das andere System zuführt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:suppliesGas
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:exchangeGas ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system supplies gaseous mass to the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System gasförmige Masse an das andere System zuführt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:suppliesLiquid
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:exchangeLiquid ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system supplies liquid mass to the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige Masse an das andere System zuführt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:suppliesMass
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:exchangeMass ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system supplies mass to the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Masse an das andere System zuführt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:suppliesMechanicalEnergy
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:exchangeMechanicalEnergy ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system supplies mechanical energy to the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System mechanische Energie an das andere System zuführt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:suppliesSolid
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:exchangeSolid ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system supplies solid mass to the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System feste Masse an das andere System zuführt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:suppliesThermalEnergy
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:exchangeThermalEnergy ;
-    owl:inverseOf tso:themalEnergySuppliedBy ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system supplies thermal energy to the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System thermische Energie an das andere System zuführt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:themalEnergySuppliedBy
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:exchangeThermalEnergy ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that one system has energy supplied by the other."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System thermische Energie von einem anderen System zuführt bekommt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:thermalEnergyServedBy
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:energyServedBy ;
-    owl:inverseOf tso:servesThermalEnergy ;
-    rdfs:domain tso:Zone ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served thermal energy by a system."@en, "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit thermischer Energie versorgt wird."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:connects
-    a owl:ObjectProperty, owl:SymmetricProperty ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe their topological connection."@en, "Eine Beziehung, welche System untereinander verbindet um deren topologische Verknüpfung zu beschreiben."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:exchangeData
-    a owl:ObjectProperty, owl:SymmetricProperty ;
-    rdfs:subPropertyOf tso:connects ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that the systems exchange data."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme Daten austauschen."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:exchangeEnergy
-    a owl:ObjectProperty, owl:SymmetricProperty ;
-    rdfs:subPropertyOf tso:connects ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that the systems exchange energy."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme Energie austauschen."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:exchangeMass
-    a owl:ObjectProperty, owl:SymmetricProperty ;
-    rdfs:subPropertyOf tso:connects ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that the systems exchange mass."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme Masse austauschen."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:exchangeMechanicalEnergy
-    a owl:ObjectProperty, owl:SymmetricProperty ;
-    rdfs:subPropertyOf tso:exchangeEnergy ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that the systems exchange mechanical energy."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme mechanische Energie austauschen."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:exchangeThermalEnergy
-    a owl:ObjectProperty, owl:SymmetricProperty ;
-    rdfs:subPropertyOf tso:exchangeEnergy ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking systems to describe that the systems exchange thermal energy."@en, "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass die Systeme thermische Energie austauschen."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:hasSink
-    a owl:ObjectProperty ;
-    owl:inverseOf tso:sinkOf ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship identifying the sink of a system."@en, "Eine Beziehung, welche die Senke eines Systems identifziert."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:hasSource
-    a owl:ObjectProperty ;
-    owl:inverseOf tso:sourceOf ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship identifying the source of a system."@en, "Eine Beziehung, welche die Quelle eines Systems identifiziert."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:hasState
-    a owl:ObjectProperty ;
-    owl:inverseOf tso:stateOf ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:State ;
-    rdfs:comment "A relationship identifying the state of a system."@en, "Eine Beziehung, welche den Zustand eines Systems identifiziert."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:hasSubSystem
-    a owl:ObjectProperty ;
-    owl:inverseOf tso:subSystemOf ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:System ;
-    rdfs:comment "A relationship linking a system to its sub system."@en, "Eine Beziehung, welche ein System mit dessen Subsystem verbindet."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:servedBy
-    a owl:ObjectProperty ;
+tso:servedBy a owl:ObjectProperty ;
     owl:inverseOf tso:serves ;
     rdfs:domain tso:Zone ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served by a system."@en, "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System versorgt wird."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served by a system."@en , "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System versorgt wird."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "served by"@en , "versorgt von"@de .
 
-tso:serves
-    a owl:ObjectProperty ;
-    owl:inverseOf tso:servedBy ;
+tso:serves a owl:ObjectProperty ;
     rdfs:domain tso:System ;
     rdfs:range tso:Zone ;
-    rdfs:comment "A relationship linking a system to a zone to describe that the system serves the zone."@en, "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone versorgt."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a system to a zone to describe that the system serves the zone."@en , "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone versorgt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "serves"@en , "versorgt"@de .
 
-tso:servesElectricalEnergy
-    a owl:ObjectProperty ;
-    rdfs:subPropertyOf tso:servesEnergy ;
-    owl:inverseOf tso:electricalEnergyServedBy ;
-    rdfs:domain tso:System ;
-    rdfs:range tso:Zone ;
-    rdfs:comment "A relationship linking a system to a zone to describe that the system serves electrical energy to the zone."@en, "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit elektrischer Energie versorgt."@de ;
-    rdfs:isDefinedBy tso: .
-
-tso:servesEnergy
-    a owl:ObjectProperty ;
+tso:servesData a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:serves ;
-    owl:inverseOf tso:energyServedBy ;
     rdfs:domain tso:System ;
     rdfs:range tso:Zone ;
-    rdfs:comment "A relationship linking a system to a zone to describe that the system serves energy to the zone."@en, "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Energie versorgt."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a system to a zone to describe that the system serves data to the zone."@en , "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Daten versorgt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "serves data"@en , "versorgt mit Daten"@de .
 
-tso:servesLightEnergy
-    a owl:ObjectProperty ;
+tso:servesElectricalEnergy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:servesEnergy ;
-    owl:inverseOf tso:lightEnergyServedBy ;
     rdfs:domain tso:System ;
     rdfs:range tso:Zone ;
-    rdfs:comment "A relationship linking a system to a zone to describe that the system serves light energy to the zone."@en, "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Lichtenergie versorgt."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a system to a zone to describe that the system serves electrical energy to the zone."@en , "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit elektrischer Energie versorgt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "serves electrical energy"@en , "versorgt mit elektrischer Energie"@de .
 
-tso:servesMass
-    a owl:ObjectProperty ;
+tso:servesEnergy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:serves ;
-    owl:inverseOf tso:massServedBy ;
     rdfs:domain tso:System ;
     rdfs:range tso:Zone ;
-    rdfs:comment "A relationship linking a system to a zone to describe that the system serves mass to the zone."@en, "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Masse versorgt."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a system to a zone to describe that the system serves energy to the zone."@en , "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Energie versorgt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "serves energy"@en , "versorgt mit Energie"@de .
 
-tso:servesSolid
-    a owl:ObjectProperty ;
+tso:servesFluid a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:servesMass ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:Zone ;
+    rdfs:comment "A relationship linking a system to a zone to describe that the system serves fluid mass to the zone."@en , "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer flüssigen/gasförmigen Masse versorgt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "serves fluid"@en , "versorgt mit flüssiger/gasförmiger Masse"@de .
+
+tso:servesGas a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:servesFluid ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:Zone ;
+    rdfs:comment "A relationship linking a system to a zone to describe that the system serves gaseous mass to the zone."@en , "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer gasförmigen Masse versorgt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "serves gas"@en , "versorgt mit gasförmiger Masse"@de .
+
+tso:servesLightEnergy a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:servesEnergy ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:Zone ;
+    rdfs:comment "A relationship linking a system to a zone to describe that the system serves light energy to the zone."@en , "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Lichtenergie versorgt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "serves light energy"@en , "versorgt mit Lichtenergie"@de .
+
+tso:servesLiquid a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:servesFluid ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:Zone ;
+    rdfs:comment "A relationship linking a system to a zone to describe that the system serves liquid mass to the zone."@en , "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit einer flüssigen Masse versorgt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "serves liquid"@en , "versorgt mit flüssiger Masse"@de .
+
+tso:servesMass a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:serves ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:Zone ;
+    rdfs:comment "A relationship linking a system to a zone to describe that the system serves mass to the zone."@en , "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Masse versorgt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "serves mass"@en , "versorgt mit Masse"@de .
+
+tso:servesMechanicalEnergy a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:servesEnergy ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:Zone ;
+    rdfs:comment "A relationship linking a system to a zone to describe that the system serves mechanical energy to the zone."@en , "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit mechanischer Energie versorgt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "serves mechanical energy"@en , "versorgt mit mechanischer Energie"@de .
+
+tso:servesSolid a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:servesMass ;
     owl:inverseOf tso:solidServedBy ;
     rdfs:domain tso:System ;
     rdfs:range tso:Zone ;
-    rdfs:comment "A relationship linking a system to a zone to describe that the system serves solid mass to the zone."@en, "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit fester Masse versorgt."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a system to a zone to describe that the system serves solid mass to the zone."@en , "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit fester Masse versorgt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "serves solid"@en , "versorgt mit fester Masse"@de .
 
-tso:servesSoundEnergy
-    a owl:ObjectProperty ;
+tso:servesSoundEnergy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:servesEnergy ;
     owl:inverseOf tso:soundEnergyServedBy ;
     rdfs:domain tso:System ;
     rdfs:range tso:Zone ;
-    rdfs:comment "A relationship linking a system to a zone to describe that the system serves sound energy to the zone."@en, "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Schallenergie versorgt."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a system to a zone to describe that the system serves sound energy to the zone."@en , "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit Schallenergie versorgt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "serves sound energy"@en , "versorgt mit Schallenergie"@de .
 
-tso:servesThermalEnergy
-    a owl:ObjectProperty ;
+tso:servesThermalEnergy a owl:ObjectProperty ;
     rdfs:subPropertyOf tso:servesEnergy ;
     owl:inverseOf tso:thermalEnergyServedBy ;
     rdfs:domain tso:System ;
     rdfs:range tso:Zone ;
-    rdfs:comment "A relationship linking a system to a zone to describe that the system serves thermal energy to the zone."@en, "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit thermischer Energie versorgt."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a system to a zone to describe that the system serves thermal energy to the zone."@en , "Eine Beziehung, welche ein System mit einer Zone verbindet um zu beschreiben, dass das System die Zone mit thermischer Energie versorgt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "serves thermal energy"@en , "versorgt mit thermischer Energie"@de .
 
-tso:sinkOf
-    a owl:ObjectProperty ;
+tso:sinkOf a owl:ObjectProperty ;
     rdfs:domain tso:System ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship identifying the system of a sink."@en, "Eine Beziehung, welche das dazugehörige System der Senke identifiziert."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship identifying the system of a sink."@en , "Eine Beziehung, welche das dazugehörige System der Senke identifiziert."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Senke von"@de , "sink of"@en .
 
-tso:sourceOf
-    a owl:ObjectProperty ;
+tso:solidServedBy a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:massServedBy ;
+    rdfs:domain tso:Zone ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served solid mass by a system."@en , "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit fester Masse versorgt wird."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "solid served by"@en , "versorgt mit fester Masse von"@de .
+
+tso:solidSuppliedBy a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:exchangeSolid ;
+    owl:inverseOf tso:suppliesSolid ;
     rdfs:domain tso:System ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship identifying the system of a source."@en, "Eine Beziehung, welche das dazugehörige System einer Quelle identifiziert."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking systems to describe that one system has solid mass supplied by the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System feste Masse von einem anderen System zuführt bekommt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "bekommt feste Masse zugeführt"@de , "solid supplied by"@en .
 
-tso:stateOf
-    a owl:ObjectProperty ;
+tso:soundEnergyServedBy a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:energyServedBy ;
+    rdfs:domain tso:Zone ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served sound energy by a system."@en , "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit Schallenergie versorgt wird."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "sound energy served by"@en , "versorgt mit Schallenergie von"@de .
+
+tso:sourceOf a owl:ObjectProperty ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship identifying the system of a source."@en , "Eine Beziehung, welche das dazugehörige System einer Quelle identifiziert."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Quelle von"@de , "source of"@en .
+
+tso:stateOf a owl:ObjectProperty ;
     rdfs:domain tso:State ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship identifying the system of a state."@en, "Eine Beziehung, welche das dazugehörige System eines Zustand identifiziert."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship identifying the system of a state."@en , "Eine Beziehung, welche das dazugehörige System eines Zustand identifiziert."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Zustand von"@de , "state of"@en .
 
-tso:subSystemOf
-    a owl:ObjectProperty ;
+tso:subStateOf a owl:ObjectProperty , owl:TransitiveProperty ;
+    rdfs:domain tso:State ;
+    rdfs:range tso:State ;
+    rdfs:comment "A relationship linking a state to its super state."@en , "Eine Beziehung, welche einen Zustand mit dessen Superzustand verbindet."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Subzustand von"@de , "sub state of"@en .
+
+tso:subSystemOf a owl:ObjectProperty ;
     rdfs:domain tso:System ;
     rdfs:range tso:System ;
-    rdfs:comment "A relationship linking a system to its super system."@en, "Eine Beziehung, welche ein System mit dessen Supersystem verbindet."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship linking a system to its super system."@en , "Eine Beziehung, welche ein System mit dessen Supersystem verbindet."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "Subsystem von"@de , "sub system of"@en .
 
-tso:hasDataPointKey
-    a owl:DatatypeProperty ;
+tso:suppliesData a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:exchangeData ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking systems to describe that one system supplies data to the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Daten an das andere System zuführt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "führt Daten zu"@de , "supplies data"@en .
+
+tso:suppliesElectricalEnergy a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:exchangeElectricalEnergy ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking systems to describe that one system supplies electrical energy to the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System elektrische Energie an das andere System zuführt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "führt elektrische Energie zu"@de , "supplies electrical energy"@en .
+
+tso:suppliesEnergy a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:exchangeEnergy ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking systems to describe that one system supplies energy to the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Energie an das andere System zuführt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "führt Energie zu"@de , "supplies energy"@en .
+
+tso:suppliesFluid a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:exchangeFluid ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking systems to describe that one system supplies fluid mass to the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige/gasförmige Masse an das andere System zuführt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "führt flüssige/gasförmige Masse zu"@de , "supplies fluid"@en .
+
+tso:suppliesGas a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:exchangeGas ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking systems to describe that one system supplies gaseous mass to the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System gasförmige Masse an das andere System zuführt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "führt gasförmige Masse zu"@de , "supplies gas"@en .
+
+tso:suppliesLiquid a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:exchangeLiquid ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking systems to describe that one system supplies liquid mass to the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System flüssige Masse an das andere System zuführt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "führt flüssige Masse zu"@de , "supplies liquid"@en .
+
+tso:suppliesMass a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:exchangeMass ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking systems to describe that one system supplies mass to the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System Masse an das andere System zuführt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "führt Masse zu"@de , "supplies mass"@en .
+
+tso:suppliesMechanicalEnergy a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:exchangeMechanicalEnergy ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking systems to describe that one system supplies mechanical energy to the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System mechanische Energie an das andere System zuführt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "führt mechanische Energie zu"@de , "supplies mechanical energy"@en .
+
+tso:suppliesSolid a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:exchangeSolid ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking systems to describe that one system supplies solid mass to the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System feste Masse an das andere System zuführt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "führt feste Masse zu"@de , "supplies solid"@en .
+
+tso:suppliesThermalEnergy a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:exchangeThermalEnergy ;
+    owl:inverseOf tso:themalEnergySuppliedBy ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking systems to describe that one system supplies thermal energy to the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System thermische Energie an das andere System zuführt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "führt thermische Energie zu"@de , "supplies thermal energy"@en .
+
+tso:themalEnergySuppliedBy a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:exchangeThermalEnergy ;
+    rdfs:domain tso:System ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking systems to describe that one system has energy supplied by the other."@en , "Eine Beziehung, welche Systeme untereinander verbindet um zu beschreiben, dass ein System thermische Energie von einem anderen System zuführt bekommt."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "bekommt thermische Energie zugeführt"@de , "thermal energy supplied by"@en .
+
+tso:thermalEnergyServedBy a owl:ObjectProperty ;
+    rdfs:subPropertyOf tso:energyServedBy ;
+    rdfs:domain tso:Zone ;
+    rdfs:range tso:System ;
+    rdfs:comment "A relationship linking a zone to a system to describe that the zone is served thermal energy by a system."@en , "Eine Beziehung, welche eine Zone mit einem System verbindet um zu beschreiben, dass die Zone von dem System mit thermischer Energie versorgt wird."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "thermal energy served by"@en , "versorgt mit thermischer Energie von"@de .
+
+
+tso:hasDataPointKey a owl:DatatypeProperty ;
     rdfs:domain tso:System ;
     rdfs:range xsd:string ;
-    rdfs:label "reference designation key"@en, "Anlagenkennzeichnungsschlüssel"@de ;
-    rdfs:comment "An alphanumeric String to link the system to reference designation systems."@en, "Eine alphanumerische Zeichenkette als Anlagenkennzeichnungsschlüssel."@de ;
-    rdfs:isDefinedBy tso: .
+    rdfs:comment "A relationship which assignes a data point key to a system."@en , "Eine Beziehung, die einem System einen Anlagenkennzeichnungsschlüssel zuweist."@de ;
+    rdfs:isDefinedBy tso: ;
+    rdfs:label "has data point key"@en , "hat Anlagenkennzeichnungsschlüssel"@de .
+
