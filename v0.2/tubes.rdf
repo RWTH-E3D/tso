@@ -10,18 +10,18 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/">
     <owl:Ontology rdf:about="https://w3id.org/tso#">
-        <owl:versionInfo>0.2</owl:versionInfo>
         <owl:versionIRI rdf:resource="https://w3id.org/v0.2/tubes"/>
         <dc:creator>Dominik Schlütter</dc:creator>
         <dc:creator>Nicolas Pauen</dc:creator>
-        <dc:title>TUBES system ontology</dc:title>
         <dc:description>The scope of the TUBES ontology is to explicitly define the topology of interconnected building service system and their relationship to the spatial structure. It has a strong alignment to other ontologies within the W3C community and aims to provide the means to link information at data level within the AEC industry.</dc:description>
         <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-23T00:00:00</dc:issued>
-        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-22T15:00:00</dc:modified>
         <dc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <rdfs:seeAlso rdf:resource="https://doi.org/10.1002/bapi.202000027"/>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-22T15:00:00</dc:modified>
+        <dc:title>TUBES system ontology</dc:title>
         <vann:preferredNamespacePrefix>tso</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/tso#"/>
+        <rdfs:seeAlso rdf:resource="https://doi.org/10.1002/bapi.202000027"/>
+        <owl:versionInfo>0.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -38,28 +38,51 @@
 
 
     <!-- http://purl.org/dc/terms/creator -->
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
 
     <!-- http://purl.org/dc/terms/description -->
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
 
     <!-- http://purl.org/dc/terms/issued -->
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
 
     <!-- http://purl.org/dc/terms/license -->
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
 
     <!-- http://purl.org/dc/terms/modified -->
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
 
     <!-- http://purl.org/dc/terms/title -->
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
 
     <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
 
     <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
 
 
     <!-- 
@@ -84,6 +107,21 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
         <rdfs:label xml:lang="en">connects</rdfs:label>
         <rdfs:label xml:lang="de">verbindet</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/tso#contains -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#contains">
+        <owl:inverseOf rdf:resource="https://w3id.org/tso#locatedIn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#Zone"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A relationship, which defines systems that are contained in a zone.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche in einer Zone enthaltene Systeme beschreibt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="de">beinhaltet</rdfs:label>
+        <rdfs:label xml:lang="en">contains</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -528,6 +566,20 @@
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
         <rdfs:label xml:lang="de">bekommt flüssige Masse zugeführt</rdfs:label>
         <rdfs:label xml:lang="en">liquid supplied by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/tso#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/tso#locatedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#Zone"/>
+        <rdfs:comment xml:lang="en">A relationship, which defines the position of a system in a spatial context.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Beziehung, welche die Position eines Systems im räumlichen Kontext beschreibt.</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/tso#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">located in</rdfs:label>
+        <rdfs:label xml:lang="de">platziert in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1145,7 +1197,7 @@
     <!-- https://w3id.org/tso#AutomationSystem -->
 
     <owl:Class rdf:about="https://w3id.org/tso#AutomationSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#FunctionalSystem"/>
         <rdfs:comment xml:lang="en">A system which distributes/stores/converts data for the purpose of automation and monitoring.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Daten zum Zweck der Automation und des Monitorings verteilt/speichert/konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -1155,10 +1207,25 @@
     
 
 
+    <!-- https://w3id.org/tso#Component -->
+
+    <owl:Class rdf:about="https://w3id.org/tso#Component">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/tso#State"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/tso#Zone"/>
+        <rdfs:comment xml:lang="en">A component is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or sub-systems and has attributes such as inputs, outputs and states. The boundary which isolates the component from the world or a supersystem is defined by the manufacturer with regards to the product aspect.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Eine Komponente ist das Modell einer Ganzheit welches von ihrer Umgebung bzw. einem Supersystems abgegrenzt ist, welches aus miteinander verknüpften Komponenten oder Subsystemen bestehen kann und Attribute wie Inputs, Outputs und Zuständen aufweist. Die Grenze, welche die Komponente von ihrer Umgebung bzw. einem Supersystem abgrenzt wird vom Hersteller in Bezug auf den Produktaspekt definiert.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="de">https://w3id.org/tso#</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Component</rdfs:label>
+        <rdfs:label xml:lang="de">Komponente</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/tso#ConversionSystem -->
 
     <owl:Class rdf:about="https://w3id.org/tso#ConversionSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#TechnicalSystem"/>
         <rdfs:comment xml:lang="en">A system which converts mass, energy and/or data.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Masse, Energie und/oder Daten konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -1171,7 +1238,7 @@
     <!-- https://w3id.org/tso#CoolingSystem -->
 
     <owl:Class rdf:about="https://w3id.org/tso#CoolingSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#FunctionalSystem"/>
         <rdfs:comment xml:lang="en">A system which distributes/stores/converts thermal energy for the purpose of cooling.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches thermische Energie für den Zweck der Kühlung verteilt/speichert/konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -1181,10 +1248,23 @@
     
 
 
+    <!-- https://w3id.org/tso#DataConversionSystem -->
+
+    <owl:Class rdf:about="https://w3id.org/tso#DataConversionSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#ConversionSystem"/>
+        <rdfs:comment xml:lang="en">A system, which converts data.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein System, welches Daten wandelt.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+        <rdfs:label xml:lang="en">Data Conversion System</rdfs:label>
+        <rdfs:label xml:lang="de">Datenwandlungssystem</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/tso#DataSystem -->
 
     <owl:Class rdf:about="https://w3id.org/tso#DataSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#FunctionalSystem"/>
         <rdfs:comment xml:lang="en">A system which distributes/stores/converts data.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Daten verteilt/speichert/konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -1197,7 +1277,7 @@
     <!-- https://w3id.org/tso#DistributionSystem -->
 
     <owl:Class rdf:about="https://w3id.org/tso#DistributionSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#TechnicalSystem"/>
         <rdfs:comment xml:lang="en">A system which distributes mass, energy and/or data.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Masse, Energie und/oder Daten verteilt.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -1210,7 +1290,7 @@
     <!-- https://w3id.org/tso#DrainageSystem -->
 
     <owl:Class rdf:about="https://w3id.org/tso#DrainageSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#FunctionalSystem"/>
         <rdfs:comment xml:lang="en">A system which discharges mass.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Masse abführt.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -1223,7 +1303,7 @@
     <!-- https://w3id.org/tso#ElectricalSystem -->
 
     <owl:Class rdf:about="https://w3id.org/tso#ElectricalSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#FunctionalSystem"/>
         <rdfs:comment xml:lang="en">A system which distributes/stores/converts electrical energy.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches elektrische Energie verteilt/speichert/konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -1238,7 +1318,7 @@
     <owl:Class rdf:about="https://w3id.org/tso#EnergyConversionSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/tso#ConversionSystem"/>
         <rdfs:comment xml:lang="en">A system which converts energy to another form of energy and/or data.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Ein System, welches Energie in eine andere Form der Energie und/oder Daten konvertiert.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein System, welches Energie in eine andere Form von Energie konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
         <rdfs:label xml:lang="de">Energiewandlungssystem</rdfs:label>
         <rdfs:label xml:lang="en">Energy Conversion System</rdfs:label>
@@ -1249,7 +1329,7 @@
     <!-- https://w3id.org/tso#FluidSystem -->
 
     <owl:Class rdf:about="https://w3id.org/tso#FluidSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#FunctionalSystem"/>
         <rdfs:comment xml:lang="en">A system which supplies/stores/converts fluid mass.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches gasförmige/flüssige Masse versorgt/speichert/konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -1259,15 +1339,15 @@
     
 
 
-    <!-- https://w3id.org/tso#HeatingCoolingSystem -->
+    <!-- https://w3id.org/tso#FunctionalSystem -->
 
-    <owl:Class rdf:about="https://w3id.org/tso#HeatingCoolingSystem">
+    <owl:Class rdf:about="https://w3id.org/tso#FunctionalSystem">
         <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A system which distributes/stores/converts thermal energy for the purpose of heating and/or cooling.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Ein System, welches thermische Energie für den Zweck der Heizung und/oder Kühlung verteilt/speichert/konvertiert.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A system is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or subsystems and has attributes such as inputs, outputs and states. Is is predominantly defined by its overall inherent function.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein funktionales System ist das Modell einer Ganzheit welches von seiner Umgebung bzw. einem Supersystems abgegrenzt ist, welches aus miteinander verknüpften Komponenten oder Subsystemen bestehen kann und Atrribute wie Inputs, Outputs und Zuständen aufweist. Es ist überwiegend über die inhärente Gesamtfunktion definiert.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
-        <rdfs:label xml:lang="en">Heating Cooling System</rdfs:label>
-        <rdfs:label xml:lang="de">Heiz- und Kühlsystem</rdfs:label>
+        <rdfs:label xml:lang="en">Functional System</rdfs:label>
+        <rdfs:label xml:lang="de">Funktionales System</rdfs:label>
     </owl:Class>
     
 
@@ -1275,7 +1355,7 @@
     <!-- https://w3id.org/tso#HeatingSystem -->
 
     <owl:Class rdf:about="https://w3id.org/tso#HeatingSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#FunctionalSystem"/>
         <rdfs:comment xml:lang="en">A system which distributes/stores/converts thermal energy for the purpose of heating.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches thermische Energie für den Zweck der Heizung verteilt/speichert/konvertiert.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -1285,15 +1365,15 @@
     
 
 
-    <!-- https://w3id.org/tso#LightingSystem -->
+    <!-- https://w3id.org/tso#MassConversionSystem -->
 
-    <owl:Class rdf:about="https://w3id.org/tso#LightingSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
-        <rdfs:comment xml:lang="en">A system which supplies/stores/converts electrical energy for the purpose of lighting.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Ein System, welches elektrische Energie für den Zwecke der Beleuchtung versorgt/speichert/konvertiert.</rdfs:comment>
+    <owl:Class rdf:about="https://w3id.org/tso#MassConversionSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#ConversionSystem"/>
+        <rdfs:comment xml:lang="en">A system which converts mass.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein System, welches Masse wandelt.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
-        <rdfs:label xml:lang="de">Beleuchtungssystem</rdfs:label>
-        <rdfs:label xml:lang="en">Lighting System</rdfs:label>
+        <rdfs:label xml:lang="en">Mass Conversion System</rdfs:label>
+        <rdfs:label xml:lang="de">Materienwandlungssystem</rdfs:label>
     </owl:Class>
     
 
@@ -1314,12 +1394,25 @@
     <!-- https://w3id.org/tso#SafetySystem -->
 
     <owl:Class rdf:about="https://w3id.org/tso#SafetySystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#FunctionalSystem"/>
         <rdfs:comment xml:lang="en">A system which protects from danger and damage.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches vor Gefahr und Schäden schützt.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
         <rdfs:label xml:lang="en">Safety System</rdfs:label>
         <rdfs:label xml:lang="de">Sicherheitssystem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/tso#SanitarySystem -->
+
+    <owl:Class rdf:about="https://w3id.org/tso#SanitarySystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#FunctionalSystem"/>
+        <rdfs:comment xml:lang="en">A system, which converts, stores and distributes a mass for the purpose of hygiene and human health.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein System, welches Masse zu Zweck der Hygiene und Gesundheit des Menschens wandelt, versogt und speichert.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
+        <rdfs:label xml:lang="en">Sanitary System</rdfs:label>
+        <rdfs:label xml:lang="de">Sanitärsystem</rdfs:label>
     </owl:Class>
     
 
@@ -1341,7 +1434,7 @@
     <!-- https://w3id.org/tso#StorageSystem -->
 
     <owl:Class rdf:about="https://w3id.org/tso#StorageSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#TechnicalSystem"/>
         <rdfs:comment xml:lang="en">A system which stores mass, energy and/or data.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Masse, Energie und/oder Daten speichert</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -1368,8 +1461,8 @@
 
     <owl:Class rdf:about="https://w3id.org/tso#System">
         <owl:disjointWith rdf:resource="https://w3id.org/tso#Zone"/>
-        <rdfs:comment xml:lang="en">A system is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or subsystems and has links between attributes such as inputs, outputs and states.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Ein System ist das Modell einer Ganzheit welches von seiner Umgebung bzw. einem Supersystems abgegrenzt ist, welches aus miteinander verknüpften Komponenten oder Subsystemen bestehen kann und Beziehungen zwischen Attributen wie Inputs, Outputs und Zuständen aufweist.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A system is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or subsystems and has attributes such as inputs, outputs and states.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein System ist das Modell einer Ganzheit welches von seiner Umgebung bzw. einem Supersystems abgegrenzt ist, welches aus miteinander verknüpften Komponenten oder Subsystemen bestehen kann und Attribute wie Inputs, Outputs und Zuständen aufweist.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
         <rdfs:label xml:lang="de">System</rdfs:label>
         <rdfs:label xml:lang="en">System</rdfs:label>
@@ -1377,15 +1470,15 @@
     
 
 
-    <!-- https://w3id.org/tso#TreatmentSystem -->
+    <!-- https://w3id.org/tso#TechnicalSystem -->
 
-    <owl:Class rdf:about="https://w3id.org/tso#TreatmentSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#ConversionSystem"/>
-        <rdfs:comment xml:lang="en">A system which converts/treats a flow.</rdfs:comment>
-        <rdfs:comment xml:lang="de">Ein System, welches Masse konvertiert/behandelt.</rdfs:comment>
+    <owl:Class rdf:about="https://w3id.org/tso#TechnicalSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:comment xml:lang="en">A system is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or subsystems and has attributes such as inputs, outputs and states. Is is predominantly defined by the technical solution with which the overall inherent function is fulfilled.</rdfs:comment>
+        <rdfs:comment xml:lang="de">Ein technisches System ist das Modell einer Ganzheit welches von seiner Umgebung bzw. einem Supersystems abgegrenzt ist, welches aus miteinander verknüpften Komponenten oder Subsystemen bestehen kann und Atrribute wie Inputs, Outputs und Zuständen aufweist. Es ist überwiegend über die technische Lösung zur Umsetzung der entsprechenden inhärente Gesamtfunktion definiert.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
-        <rdfs:label xml:lang="de">Bearbeitungssystem</rdfs:label>
-        <rdfs:label xml:lang="en">Treatment System</rdfs:label>
+        <rdfs:label xml:lang="en">Technical System</rdfs:label>
+        <rdfs:label xml:lang="de">Technisches System</rdfs:label>
     </owl:Class>
     
 
@@ -1393,7 +1486,7 @@
     <!-- https://w3id.org/tso#VentilationSystem -->
 
     <owl:Class rdf:about="https://w3id.org/tso#VentilationSystem">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#System"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/tso#FunctionalSystem"/>
         <rdfs:comment xml:lang="en">A system which supplies ventilation.</rdfs:comment>
         <rdfs:comment xml:lang="de">Ein System, welches Ventilation versorgt.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -1413,4 +1506,8 @@
         <rdfs:label xml:lang="en">Zone</rdfs:label>
     </owl:Class>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 

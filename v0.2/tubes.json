@@ -83,7 +83,36 @@
     "@value" : "Automatisierungssystem"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/tso#FunctionalSystem"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tso#Component",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A component is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or sub-systems and has attributes such as inputs, outputs and states. The boundary which isolates the component from the world or a supersystem is defined by the manufacturer with regards to the product aspect."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Komponente ist das Modell einer Ganzheit welches von ihrer Umgebung bzw. einem Supersystems abgegrenzt ist, welches aus miteinander verknüpften Komponenten oder Subsystemen bestehen kann und Attribute wie Inputs, Outputs und Zuständen aufweist. Die Grenze, welche die Komponente von ihrer Umgebung bzw. einem Supersystem abgrenzt wird vom Hersteller in Bezug auf den Produktaspekt definiert."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "de",
+    "@value" : "https://w3id.org/tso#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Component"
+  }, {
+    "@language" : "de",
+    "@value" : "Komponente"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/tso#System"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/tso#State"
+  }, {
+    "@id" : "https://w3id.org/tso#Zone"
   } ]
 }, {
   "@id" : "https://w3id.org/tso#ConversionSystem",
@@ -106,7 +135,7 @@
     "@value" : "Wandlungssystem"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/tso#System"
+    "@id" : "https://w3id.org/tso#TechnicalSystem"
   } ]
 }, {
   "@id" : "https://w3id.org/tso#CoolingSystem",
@@ -129,7 +158,30 @@
     "@value" : "Kühlsystem"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/tso#System"
+    "@id" : "https://w3id.org/tso#FunctionalSystem"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tso#DataConversionSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A system, which converts data."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein System, welches Daten wandelt."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/tso#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Data Conversion System"
+  }, {
+    "@language" : "de",
+    "@value" : "Datenwandlungssystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/tso#ConversionSystem"
   } ]
 }, {
   "@id" : "https://w3id.org/tso#DataSystem",
@@ -152,7 +204,7 @@
     "@value" : "Datensystem"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/tso#System"
+    "@id" : "https://w3id.org/tso#FunctionalSystem"
   } ]
 }, {
   "@id" : "https://w3id.org/tso#DistributionSystem",
@@ -175,7 +227,7 @@
     "@value" : "Verteilungssystem"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/tso#System"
+    "@id" : "https://w3id.org/tso#TechnicalSystem"
   } ]
 }, {
   "@id" : "https://w3id.org/tso#DrainageSystem",
@@ -198,7 +250,7 @@
     "@value" : "Drainage System"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/tso#System"
+    "@id" : "https://w3id.org/tso#FunctionalSystem"
   } ]
 }, {
   "@id" : "https://w3id.org/tso#ElectricalSystem",
@@ -221,7 +273,7 @@
     "@value" : "Elektroniksystem"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/tso#System"
+    "@id" : "https://w3id.org/tso#FunctionalSystem"
   } ]
 }, {
   "@id" : "https://w3id.org/tso#EnergyConversionSystem",
@@ -231,7 +283,7 @@
     "@value" : "A system which converts energy to another form of energy and/or data."
   }, {
     "@language" : "de",
-    "@value" : "Ein System, welches Energie in eine andere Form der Energie und/oder Daten konvertiert."
+    "@value" : "Ein System, welches Energie in eine andere Form von Energie konvertiert."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tso#"
@@ -267,27 +319,27 @@
     "@value" : "Strömungssystem"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/tso#System"
+    "@id" : "https://w3id.org/tso#FunctionalSystem"
   } ]
 }, {
-  "@id" : "https://w3id.org/tso#HeatingCoolingSystem",
+  "@id" : "https://w3id.org/tso#FunctionalSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A system which distributes/stores/converts thermal energy for the purpose of heating and/or cooling."
+    "@value" : "A system is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or subsystems and has attributes such as inputs, outputs and states. Is is predominantly defined by its overall inherent function."
   }, {
     "@language" : "de",
-    "@value" : "Ein System, welches thermische Energie für den Zweck der Heizung und/oder Kühlung verteilt/speichert/konvertiert."
+    "@value" : "Ein funktionales System ist das Modell einer Ganzheit welches von seiner Umgebung bzw. einem Supersystems abgegrenzt ist, welches aus miteinander verknüpften Komponenten oder Subsystemen bestehen kann und Atrribute wie Inputs, Outputs und Zuständen aufweist. Es ist überwiegend über die inhärente Gesamtfunktion definiert."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tso#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Heating Cooling System"
+    "@value" : "Functional System"
   }, {
     "@language" : "de",
-    "@value" : "Heiz- und Kühlsystem"
+    "@value" : "Funktionales System"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/tso#System"
@@ -313,30 +365,30 @@
     "@value" : "Heizsystem"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/tso#System"
+    "@id" : "https://w3id.org/tso#FunctionalSystem"
   } ]
 }, {
-  "@id" : "https://w3id.org/tso#LightingSystem",
+  "@id" : "https://w3id.org/tso#MassConversionSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A system which supplies/stores/converts electrical energy for the purpose of lighting."
+    "@value" : "A system which converts mass."
   }, {
     "@language" : "de",
-    "@value" : "Ein System, welches elektrische Energie für den Zwecke der Beleuchtung versorgt/speichert/konvertiert."
+    "@value" : "Ein System, welches Masse wandelt."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tso#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "de",
-    "@value" : "Beleuchtungssystem"
-  }, {
     "@language" : "en",
-    "@value" : "Lighting System"
+    "@value" : "Mass Conversion System"
+  }, {
+    "@language" : "de",
+    "@value" : "Materienwandlungssystem"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/tso#System"
+    "@id" : "https://w3id.org/tso#ConversionSystem"
   } ]
 }, {
   "@id" : "https://w3id.org/tso#ReturnSystem",
@@ -382,7 +434,30 @@
     "@value" : "Sicherheitssystem"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/tso#System"
+    "@id" : "https://w3id.org/tso#FunctionalSystem"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tso#SanitarySystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A system, which converts, stores and distributes a mass for the purpose of hygiene and human health."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein System, welches Masse zu Zweck der Hygiene und Gesundheit des Menschens wandelt, versogt und speichert."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/tso#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sanitary System"
+  }, {
+    "@language" : "de",
+    "@value" : "Sanitärsystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/tso#FunctionalSystem"
   } ]
 }, {
   "@id" : "https://w3id.org/tso#State",
@@ -430,7 +505,7 @@
     "@value" : "Storage System"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/tso#System"
+    "@id" : "https://w3id.org/tso#TechnicalSystem"
   } ]
 }, {
   "@id" : "https://w3id.org/tso#SupplySystem",
@@ -460,10 +535,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A system is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or subsystems and has links between attributes such as inputs, outputs and states."
+    "@value" : "A system is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or subsystems and has attributes such as inputs, outputs and states."
   }, {
     "@language" : "de",
-    "@value" : "Ein System ist das Modell einer Ganzheit welches von seiner Umgebung bzw. einem Supersystems abgegrenzt ist, welches aus miteinander verknüpften Komponenten oder Subsystemen bestehen kann und Beziehungen zwischen Attributen wie Inputs, Outputs und Zuständen aufweist."
+    "@value" : "Ein System ist das Modell einer Ganzheit welches von seiner Umgebung bzw. einem Supersystems abgegrenzt ist, welches aus miteinander verknüpften Komponenten oder Subsystemen bestehen kann und Attribute wie Inputs, Outputs und Zuständen aufweist."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tso#"
@@ -479,27 +554,27 @@
     "@id" : "https://w3id.org/tso#Zone"
   } ]
 }, {
-  "@id" : "https://w3id.org/tso#TreatmentSystem",
+  "@id" : "https://w3id.org/tso#TechnicalSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A system which converts/treats a flow."
+    "@value" : "A system is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or subsystems and has attributes such as inputs, outputs and states. Is is predominantly defined by the technical solution with which the overall inherent function is fulfilled."
   }, {
     "@language" : "de",
-    "@value" : "Ein System, welches Masse konvertiert/behandelt."
+    "@value" : "Ein technisches System ist das Modell einer Ganzheit welches von seiner Umgebung bzw. einem Supersystems abgegrenzt ist, welches aus miteinander verknüpften Komponenten oder Subsystemen bestehen kann und Atrribute wie Inputs, Outputs und Zuständen aufweist. Es ist überwiegend über die technische Lösung zur Umsetzung der entsprechenden inhärente Gesamtfunktion definiert."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/tso#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "de",
-    "@value" : "Bearbeitungssystem"
-  }, {
     "@language" : "en",
-    "@value" : "Treatment System"
+    "@value" : "Technical System"
+  }, {
+    "@language" : "de",
+    "@value" : "Technisches System"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/tso#ConversionSystem"
+    "@id" : "https://w3id.org/tso#System"
   } ]
 }, {
   "@id" : "https://w3id.org/tso#VentilationSystem",
@@ -522,7 +597,7 @@
     "@value" : "Ventilation System"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/tso#System"
+    "@id" : "https://w3id.org/tso#FunctionalSystem"
   } ]
 }, {
   "@id" : "https://w3id.org/tso#Zone",
@@ -569,6 +644,35 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/tso#System"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tso#contains",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relationship, which defines systems that are contained in a zone."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Beziehung, welche in einer Zone enthaltene Systeme beschreibt."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/tso#Zone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/tso#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "beinhaltet"
+  }, {
+    "@language" : "en",
+    "@value" : "contains"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/tso#System"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/tso#locatedIn"
   } ]
 }, {
   "@id" : "https://w3id.org/tso#dataServedBy",
@@ -1446,6 +1550,32 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/tso#suppliesLiquid"
+  } ]
+}, {
+  "@id" : "https://w3id.org/tso#locatedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relationship, which defines the position of a system in a spatial context."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine Beziehung, welche die Position eines Systems im räumlichen Kontext beschreibt."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/tso#System"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/tso#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "located in"
+  }, {
+    "@language" : "de",
+    "@value" : "platziert in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/tso#Zone"
   } ]
 }, {
   "@id" : "https://w3id.org/tso#massServedBy",
