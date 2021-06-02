@@ -4,7 +4,7 @@ The scope of the TUBES System Ontology is to explicitly define the topology of i
 A persistent URI namespace for the TUBES System Ontology (tso) will be provided by [W3ID](https://w3id.org) at <https://w3id.org/tso>.
 
 ## Documentation
-A documentation of the latest version can be found [here](https://pauenn.github.io/tso/documentation/index.html).
+Extensive [documentation](documentation) is also available.
 
 ## Concept
 The three main classes of the TUBES System Ontology are *tso:System*, *tso:Zone* and *tso:State*.  A *tso:Zone* is defined as a part of the physical world or a virtual world that is inherently both located in this world and has a 3D spatial extent. It has a strong alignment to the zone concept of the Building Topology Ontology. The inverse object properties *tso:serves* and *tso:servedBy* define relationships linking systems and zones to describe that a zone is served by a system, respectively a system serves a zone. *tso:locatedIn* and *tso:contains* define relationships to describe that a system is located in a zone, respectively a zone contains a system. *tso:State* defines the planned internal condition of a component or abstract system. To link a state to a system, respectively a system to a state, the inverse properties *tso:stateOf* and *tso:hasState* are defined. A *tso:System* is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or subsystems and has attributes such as inputs, outputs and states. Within this definition there are three concepts with are further detailed in the following.
