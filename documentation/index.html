@@ -1,0 +1,4374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TUBES system ontology</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg==">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1Sew
+EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <style>
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-con,
+        .sup-col {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-con {
+            color:orange;
+        }
+
+        .sup-col {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
+    </style>
+
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "https://w3id.org/tso#",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "<p>The scope of the TUBES ontology is to explicitly define the topology of interconnected building service system and their relationship to the spatial structure. It has a strong alignment to other ontologies within the W3C community and aims to provide the means to link information at data level within the AEC industry.</p>"
+      }
+    ],
+    "https://schema.org/license": [
+      {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "TUBES system ontology"
+      }
+    ]
+  }
+]
+    </script>
+</head>
+<body>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.10.0</span>
+  </div>
+  <h1>TUBES system ontology</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>URI</dt>
+        <dd><code>https://w3id.org/tso#</code></dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator">Creator</a>(s)</dt>
+        <dd>
+            Dominik Schlütter<br/>
+            Nicolas Pauen<br/>
+        </dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/modified">Modified</a></dt>
+        <dd>2021-05-30T15:00:00</dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/issued">Issued</a></dt>
+        <dd>2020-09-23T00:00:00</dd>
+        <dt>Version Information</dt>
+        <dd>0.2</dd>
+        <dt>Version URI</dt>
+        <dd><a href="https://w3id.org/v0.2/tubes">https://w3id.org/v0.2/tubes</a></dd>
+        <dt>License</dt>
+        <dd><a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a></dd>
+        <dt>Ontology RDF</dt>
+        <dd><a href="tubes.ttl">RDF (turtle)</a></dd>
+    </dl>
+    <h2>Description</h2>
+    <div id="description">
+        <p>The scope of the TUBES ontology is to explicitly define the topology of interconnected building service system and their relationship to the spatial structure. It has a strong alignment to other ontologies within the W3C community and aims to provide the means to link information at data level within the AEC industry.</p>
+    </div>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#datatypeproperties">Datatype Properties</a></li>
+        <li><a href="#annotationproperties">Annotation Properties</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+  <section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+      <li><a href="#AutomationSystem">Automation System</a></li>
+      <li><a href="#Component">Component</a></li>
+      <li><a href="#ConversionSystem">Conversion System</a></li>
+      <li><a href="#CoolingSystem">Cooling System</a></li>
+      <li><a href="#DataConversionSystem">Data Conversion System</a></li>
+      <li><a href="#DataSystem">Data System</a></li>
+      <li><a href="#DistributionSystem">Distribution System</a></li>
+      <li><a href="#DrainageSystem">Drainage System</a></li>
+      <li><a href="#ElectricalSystem">Electrical System</a></li>
+      <li><a href="#EnergyConversionSystem">Energy Conversion System</a></li>
+      <li><a href="#FluidSystem">Fluid System</a></li>
+      <li><a href="#FunctionalSystem">Functional System</a></li>
+      <li><a href="#HeatingSystem">Heating System</a></li>
+      <li><a href="#MassConversionSystem">Mass Conversion System</a></li>
+      <li><a href="#ReturnSystem">Return System</a></li>
+      <li><a href="#SafetySystem">Safety System</a></li>
+      <li><a href="#SanitarySystem">Sanitary System</a></li>
+      <li><a href="#State">State</a></li>
+      <li><a href="#StorageSystem">Storage System</a></li>
+      <li><a href="#SupplySystem">Supply System</a></li>
+      <li><a href="#System">System</a></li>
+      <li><a href="#TechnicalSystem">Technical System</a></li>
+      <li><a href="#VentilationSystem">Ventilation System</a></li>
+      <li><a href="#Zone">Zone</a></li>
+    </ul>
+    <div class="entity class" id="AutomationSystem">
+        <h3>
+          Automation System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#AutomationSystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#AutomationSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system which distributes/stores/converts data for the purpose of automation and monitoring.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#FunctionalSystem">Functional System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Component">
+        <h3>
+          Component<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Component" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#Component</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A component is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or sub-systems and has attributes such as inputs, outputs and states. The boundary which isolates the component from the world or a supersystem is defined by the manufacturer with regards to the product aspect.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ConversionSystem">
+        <h3>
+          Conversion System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#ConversionSystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#ConversionSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system which converts mass, energy and/or data.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#TechnicalSystem">Technical System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#EnergyConversionSystem">Energy Conversion System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#DataConversionSystem">Data Conversion System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#MassConversionSystem">Mass Conversion System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="CoolingSystem">
+        <h3>
+          Cooling System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#CoolingSystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#CoolingSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system which distributes/stores/converts thermal energy for the purpose of cooling.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#FunctionalSystem">Functional System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="DataConversionSystem">
+        <h3>
+          Data Conversion System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#DataConversionSystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#DataConversionSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system, which converts data.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#ConversionSystem">Conversion System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="DataSystem">
+        <h3>
+          Data System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#DataSystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#DataSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system which distributes/stores/converts data.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#FunctionalSystem">Functional System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="DistributionSystem">
+        <h3>
+          Distribution System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#DistributionSystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#DistributionSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system which distributes mass, energy and/or data.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#TechnicalSystem">Technical System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#SupplySystem">Supply System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#ReturnSystem">Return System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="DrainageSystem">
+        <h3>
+          Drainage System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#DrainageSystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#DrainageSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system which discharges mass.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#FunctionalSystem">Functional System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ElectricalSystem">
+        <h3>
+          Electrical System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#ElectricalSystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#ElectricalSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system which distributes/stores/converts electrical energy.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#FunctionalSystem">Functional System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="EnergyConversionSystem">
+        <h3>
+          Energy Conversion System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#EnergyConversionSystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#EnergyConversionSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system which converts energy to another form of energy and/or data.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#ConversionSystem">Conversion System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FluidSystem">
+        <h3>
+          Fluid System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#FluidSystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#FluidSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system which supplies/stores/converts fluid mass.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#FunctionalSystem">Functional System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FunctionalSystem">
+        <h3>
+          Functional System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#FunctionalSystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#FunctionalSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or subsystems and has attributes such as inputs, outputs and states. Is is predominantly defined by its overall inherent function.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#FluidSystem">Fluid System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#SanitarySystem">Sanitary System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#AutomationSystem">Automation System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#VentilationSystem">Ventilation System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#ElectricalSystem">Electrical System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#DataSystem">Data System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#SafetySystem">Safety System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#CoolingSystem">Cooling System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#HeatingSystem">Heating System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#DrainageSystem">Drainage System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="HeatingSystem">
+        <h3>
+          Heating System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#HeatingSystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#HeatingSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system which distributes/stores/converts thermal energy for the purpose of heating.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#FunctionalSystem">Functional System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="MassConversionSystem">
+        <h3>
+          Mass Conversion System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#MassConversionSystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#MassConversionSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system which converts mass.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#ConversionSystem">Conversion System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ReturnSystem">
+        <h3>
+          Return System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#ReturnSystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#ReturnSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system which returns mass, energy and/or data.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#DistributionSystem">Distribution System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SafetySystem">
+        <h3>
+          Safety System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SafetySystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#SafetySystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system which protects from danger and damage.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#FunctionalSystem">Functional System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SanitarySystem">
+        <h3>
+          Sanitary System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SanitarySystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#SanitarySystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system, which converts, stores and distributes a mass for the purpose of hygiene and human health.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#FunctionalSystem">Functional System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="State">
+        <h3>
+          State<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#State" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#State</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A state defines the internal condition of a planned or abstract system. This includes specific aspects as on, off, open or closed as well as general aspects such as outdoor-air-operation, mixed-air-operation or heating-operation.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#substateof">sub state of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#stateof">state of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hassubstate">has sub state</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#substateof">sub state of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasstate">has state</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hassubstate">has sub state</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="StorageSystem">
+        <h3>
+          Storage System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#StorageSystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#StorageSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system which stores mass, energy and/or data.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#TechnicalSystem">Technical System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SupplySystem">
+        <h3>
+          Supply System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SupplySystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#SupplySystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system which supplies mass, energy and/or data.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#DistributionSystem">Distribution System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="System">
+        <h3>
+          System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#System" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#System</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or subsystems and has attributes such as inputs, outputs and states.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#FunctionalSystem">Functional System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Component">Component</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#TechnicalSystem">Technical System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#exchangeelectricalenergy">exchange electrical energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#masssuppliedby">mass supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliesmass">supplies mass</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#connects">connects</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliesmechanicalenergy">supplies mechanical energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#serveselectricalenergy">serves electrical energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servesmechanicalenergy">serves mechanical energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#solidsuppliedby">solid supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#gassuppliedby">gas supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangemechanicalenergy">exchange mechanical energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servessolid">serves solid</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#liquidsuppliedby">liquid supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#supplieselectricalenergy">supplies electrical energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#energysuppliedby">energy supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servesthermalenergy">serves thermal energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#mechanicalenergysuppliedby">mechanical energy supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servessoundenergy">serves sound energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#serves">serves</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangefluid">exchange fluid</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hassource">has source</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#datasuppliedby">data supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasstate">has state</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#thermalenergysuppliedby">thermal energy supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangeenergy">exchange energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangegas">exchange gas</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangemass">exchange mass</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#serveslightenergy">serves light energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#fluidsuppliedby">fluid supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#electricalenergysuppliedby">electrical energy supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#subsystemof">sub system of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliesliquid">supplies liquid</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangesolid">exchange solid</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hassink">has sink</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servesgas">serves gas</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangethermalenergy">exchange thermal energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servesdata">serves data</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangeliquid">exchange liquid</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servesmass">serves mass</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangedata">exchange data</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hasdatapointkey">has data point key</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#suppliesdata">supplies data</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliesgas">supplies gas</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#sinkof">sink of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliessolid">supplies solid</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#locatedin">located in</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#sourceof">source of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servesenergy">serves energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servesliquid">serves liquid</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servesfluid">serves fluid</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliesthermalenergy">supplies thermal energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliesenergy">supplies energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hassubsystem">has sub system</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliesfluid">supplies fluid</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#mechanicalenergysuppliedby">mechanical energy supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#massservedby">mass served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangegas">exchange gas</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#mechanicalenergyservedby">mechanical energy served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hassource">has source</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hassubsystem">has sub system</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#sourceof">source of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#fluidservedby">fluid served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#stateof">state of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangeelectricalenergy">exchange electrical energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#energyservedby">energy served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#masssuppliedby">mass supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#thermalenergysuppliedby">thermal energy supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#connects">connects</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#sinkof">sink of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#subsystemof">sub system of</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangethermalenergy">exchange thermal energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliesdata">supplies data</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliesliquid">supplies liquid</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliesenergy">supplies energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#solidsuppliedby">solid supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangeliquid">exchange liquid</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliesfluid">supplies fluid</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#supplieselectricalenergy">supplies electrical energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliesmass">supplies mass</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#gasservedby">gas served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#electricalenergyservedby">electrical energy served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#hassink">has sink</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#fluidsuppliedby">fluid supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#contains">contains</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangemechanicalenergy">exchange mechanical energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#liquidservedby">liquid served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#liquidsuppliedby">liquid supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangedata">exchange data</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#solidservedby">solid served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliesgas">supplies gas</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#gassuppliedby">gas supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliessolid">supplies solid</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#lightenergyservedby">light energy served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#electricalenergysuppliedby">electrical energy supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servedby">served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangefluid">exchange fluid</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliesthermalenergy">supplies thermal energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangeenergy">exchange energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangemass">exchange mass</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#dataservedby">data served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#thermalenergyservedby">thermal energy served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#energysuppliedby">energy supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#suppliesmechanicalenergy">supplies mechanical energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#exchangesolid">exchange solid</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#datasuppliedby">data supplied by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#soundenergyservedby">sound energy served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="TechnicalSystem">
+        <h3>
+          Technical System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#TechnicalSystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#TechnicalSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system is a model of a whole which is isolated from the world or a supersystem, which may consists of interconnected components or subsystems and has attributes such as inputs, outputs and states. Is is predominantly defined by the technical solution with which the overall inherent function is fulfilled.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#DistributionSystem">Distribution System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#ConversionSystem">Conversion System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#StorageSystem">Storage System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="VentilationSystem">
+        <h3>
+          Ventilation System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#VentilationSystem" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#VentilationSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A system which supplies ventilation.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#FunctionalSystem">Functional System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Zone">
+        <h3>
+          Zone<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Zone" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#Zone</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A part of the physical world or a virtual world that is inherently both located in this world and has a 3D spatial extent.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#energyservedby">energy served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#soundenergyservedby">sound energy served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#gasservedby">gas served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#electricalenergyservedby">electrical energy served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#lightenergyservedby">light energy served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#contains">contains</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#dataservedby">data served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#massservedby">mass served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#thermalenergyservedby">thermal energy served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servedby">served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#liquidservedby">liquid served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#solidservedby">solid served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#fluidservedby">fluid served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#mechanicalenergyservedby">mechanical energy served by</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="#servesliquid">serves liquid</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servesmechanicalenergy">serves mechanical energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#serveselectricalenergy">serves electrical energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servesthermalenergy">serves thermal energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servessoundenergy">serves sound energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servesdata">serves data</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#serveslightenergy">serves light energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servesmass">serves mass</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servesfluid">serves fluid</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#locatedin">located in</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#serves">serves</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servesenergy">serves energy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servessolid">serves solid</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="#servesgas">serves gas</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#connects">connects</a></li>
+        <li><a href="#contains">contains</a></li>
+        <li><a href="#dataservedby">data served by</a></li>
+        <li><a href="#datasuppliedby">data supplied by</a></li>
+        <li><a href="#electricalenergyservedby">electrical energy served by</a></li>
+        <li><a href="#electricalenergysuppliedby">electrical energy supplied by</a></li>
+        <li><a href="#energyservedby">energy served by</a></li>
+        <li><a href="#energysuppliedby">energy supplied by</a></li>
+        <li><a href="#exchangedata">exchange data</a></li>
+        <li><a href="#exchangeelectricalenergy">exchange electrical energy</a></li>
+        <li><a href="#exchangeenergy">exchange energy</a></li>
+        <li><a href="#exchangefluid">exchange fluid</a></li>
+        <li><a href="#exchangegas">exchange gas</a></li>
+        <li><a href="#exchangeliquid">exchange liquid</a></li>
+        <li><a href="#exchangemass">exchange mass</a></li>
+        <li><a href="#exchangemechanicalenergy">exchange mechanical energy</a></li>
+        <li><a href="#exchangesolid">exchange solid</a></li>
+        <li><a href="#exchangethermalenergy">exchange thermal energy</a></li>
+        <li><a href="#fluidservedby">fluid served by</a></li>
+        <li><a href="#fluidsuppliedby">fluid supplied by</a></li>
+        <li><a href="#gasservedby">gas served by</a></li>
+        <li><a href="#gassuppliedby">gas supplied by</a></li>
+        <li><a href="#hassink">has sink</a></li>
+        <li><a href="#hassource">has source</a></li>
+        <li><a href="#hasstate">has state</a></li>
+        <li><a href="#hassubstate">has sub state</a></li>
+        <li><a href="#hassubsystem">has sub system</a></li>
+        <li><a href="#lightenergyservedby">light energy served by</a></li>
+        <li><a href="#liquidservedby">liquid served by</a></li>
+        <li><a href="#liquidsuppliedby">liquid supplied by</a></li>
+        <li><a href="#locatedin">located in</a></li>
+        <li><a href="#massservedby">mass served by</a></li>
+        <li><a href="#masssuppliedby">mass supplied by</a></li>
+        <li><a href="#mechanicalenergyservedby">mechanical energy served by</a></li>
+        <li><a href="#mechanicalenergysuppliedby">mechanical energy supplied by</a></li>
+        <li><a href="#servedby">served by</a></li>
+        <li><a href="#serves">serves</a></li>
+        <li><a href="#servesdata">serves data</a></li>
+        <li><a href="#serveselectricalenergy">serves electrical energy</a></li>
+        <li><a href="#servesenergy">serves energy</a></li>
+        <li><a href="#servesfluid">serves fluid</a></li>
+        <li><a href="#servesgas">serves gas</a></li>
+        <li><a href="#serveslightenergy">serves light energy</a></li>
+        <li><a href="#servesliquid">serves liquid</a></li>
+        <li><a href="#servesmass">serves mass</a></li>
+        <li><a href="#servesmechanicalenergy">serves mechanical energy</a></li>
+        <li><a href="#servessolid">serves solid</a></li>
+        <li><a href="#servessoundenergy">serves sound energy</a></li>
+        <li><a href="#servesthermalenergy">serves thermal energy</a></li>
+        <li><a href="#sinkof">sink of</a></li>
+        <li><a href="#solidservedby">solid served by</a></li>
+        <li><a href="#solidsuppliedby">solid supplied by</a></li>
+        <li><a href="#soundenergyservedby">sound energy served by</a></li>
+        <li><a href="#sourceof">source of</a></li>
+        <li><a href="#stateof">state of</a></li>
+        <li><a href="#substateof">sub state of</a></li>
+        <li><a href="#subsystemof">sub system of</a></li>
+        <li><a href="#suppliesdata">supplies data</a></li>
+        <li><a href="#supplieselectricalenergy">supplies electrical energy</a></li>
+        <li><a href="#suppliesenergy">supplies energy</a></li>
+        <li><a href="#suppliesfluid">supplies fluid</a></li>
+        <li><a href="#suppliesgas">supplies gas</a></li>
+        <li><a href="#suppliesliquid">supplies liquid</a></li>
+        <li><a href="#suppliesmass">supplies mass</a></li>
+        <li><a href="#suppliesmechanicalenergy">supplies mechanical energy</a></li>
+        <li><a href="#suppliessolid">supplies solid</a></li>
+        <li><a href="#suppliesthermalenergy">supplies thermal energy</a></li>
+        <li><a href="#thermalenergysuppliedby">thermal energy supplied by</a></li>
+        <li><a href="#thermalenergyservedby">thermal energy served by</a></li>
+    </ul>
+    <div class="entity property" id="connects">
+        <h3>connects<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#connects" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#connects</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe their topological connection.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="contains">
+        <h3>contains<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#contains" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#contains</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship, which defines systems that are contained in a zone.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#locatedin">located in</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Zone">Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="dataservedby">
+        <h3>data served by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#dataservedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#dataServedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a zone to a system to describe that the zone is served data by a system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#servedby">served by</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#servesdata">serves data</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Zone">Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="datasuppliedby">
+        <h3>data supplied by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#datasuppliedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#dataSuppliedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system has data supplied by the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangedata">exchange data</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#suppliesdata">supplies data</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="electricalenergyservedby">
+        <h3>electrical energy served by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#electricalenergyservedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#electricalEnergyServedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a zone to a system to describe that the zone is served electrical energy by a system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#energyservedby">energy served by</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#serveselectricalenergy">serves electrical energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Zone">Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="electricalenergysuppliedby">
+        <h3>electrical energy supplied by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#electricalenergysuppliedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#electricalEnergySuppliedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system has electrical energy supplied by the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangeelectricalenergy">exchange electrical energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#supplieselectricalenergy">supplies electrical energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="energyservedby">
+        <h3>energy served by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#energyservedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#energyServedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a zone to a system to describe that the zone is served energy by a system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#servedby">served by</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#servesenergy">serves energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Zone">Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="energysuppliedby">
+        <h3>energy supplied by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#energysuppliedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#energySuppliedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system has energy supplied by the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangeenergy">exchange energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#suppliesenergy">supplies energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="exchangedata">
+        <h3>exchange data<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#exchangedata" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#exchangeData</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that the systems exchange data.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#connects">connects</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="exchangeelectricalenergy">
+        <h3>exchange electrical energy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#exchangeelectricalenergy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#exchangeElectricalEnergy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that the systems exchange electrical energy.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangeenergy">exchange energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="exchangeenergy">
+        <h3>exchange energy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#exchangeenergy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#exchangeEnergy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that the systems exchange energy.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#connects">connects</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="exchangefluid">
+        <h3>exchange fluid<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#exchangefluid" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#exchangeFluid</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that the systems exchange fluid.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangemass">exchange mass</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="exchangegas">
+        <h3>exchange gas<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#exchangegas" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#exchangeGas</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that the systems exchange gas.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangefluid">exchange fluid</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="exchangeliquid">
+        <h3>exchange liquid<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#exchangeliquid" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#exchangeLiquid</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that the systems exchange liquid.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangefluid">exchange fluid</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="exchangemass">
+        <h3>exchange mass<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#exchangemass" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#exchangeMass</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that the systems exchange mass.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#connects">connects</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="exchangemechanicalenergy">
+        <h3>exchange mechanical energy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#exchangemechanicalenergy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#exchangeMechanicalEnergy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that the systems exchange mechanical energy.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangeenergy">exchange energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="exchangesolid">
+        <h3>exchange solid<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#exchangesolid" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#exchangeSolid</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that the systems exchange solid.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangemass">exchange mass</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="exchangethermalenergy">
+        <h3>exchange thermal energy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#exchangethermalenergy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#exchangeThermalEnergy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that the systems exchange thermal energy.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangeenergy">exchange energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="fluidservedby">
+        <h3>fluid served by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#fluidservedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#fluidServedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a zone to a system to describe that the zone is served fluid mass by a system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#massservedby">mass served by</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#servesfluid">serves fluid</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Zone">Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="fluidsuppliedby">
+        <h3>fluid supplied by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#fluidsuppliedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#fluidSuppliedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system has fluid mass supplied by the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangefluid">exchange fluid</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#suppliesfluid">supplies fluid</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="gasservedby">
+        <h3>gas served by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#gasservedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#gasServedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a zone to a system to describe that the zone is served gaseous mass by a system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#fluidservedby">fluid served by</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#servesgas">serves gas</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Zone">Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="gassuppliedby">
+        <h3>gas supplied by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#gassuppliedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#gasSuppliedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system has gaseous mass supplied by the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangegas">exchange gas</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#suppliesgas">supplies gas</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hassink">
+        <h3>has sink<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hassink" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#hasSink</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship identifying the sink of a system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#sinkof">sink of</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hassource">
+        <h3>has source<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hassource" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#hasSource</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship identifying the source of a system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#sourceof">source of</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasstate">
+        <h3>has state<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasstate" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#hasState</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship identifying the state of a system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#stateof">state of</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#State">tso:State</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hassubstate">
+        <h3>has sub state<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hassubstate" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#hasSubState</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a state to its sub state.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#substateof">sub state of</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#State">State</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#State">tso:State</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hassubsystem">
+        <h3>has sub system<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hassubsystem" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#hasSubSystem</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a system to its sub system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#subsystemof">sub system of</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="lightenergyservedby">
+        <h3>light energy served by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#lightenergyservedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#lightEnergyServedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a zone to a system to describe that the zone is served light energy by a system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#energyservedby">energy served by</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#serveslightenergy">serves light energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Zone">Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="liquidservedby">
+        <h3>liquid served by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#liquidservedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#liquidServedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a zone to a system to describe that the zone is served liquid mass by a system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#fluidservedby">fluid served by</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#servesliquid">serves liquid</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Zone">Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="liquidsuppliedby">
+        <h3>liquid supplied by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#liquidsuppliedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#liquidSuppliedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system has liquid mass supplied by the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangeliquid">exchange liquid</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#suppliesliquid">supplies liquid</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="locatedin">
+        <h3>located in<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#locatedin" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#locatedIn</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship, which defines the position of a system in a spatial context.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#Zone">tso:Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="massservedby">
+        <h3>mass served by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#massservedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#massServedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a zone to a system to describe that the zone is served mass by a system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#servedby">served by</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#servesmass">serves mass</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Zone">Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="masssuppliedby">
+        <h3>mass supplied by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#masssuppliedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#massSuppliedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system has mass supplied by the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangemass">exchange mass</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#suppliesmass">supplies mass</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="mechanicalenergyservedby">
+        <h3>mechanical energy served by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#mechanicalenergyservedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#mechanicalEnergyServedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a zone to a system to describe that the zone is served mechanical energy by a system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#energyservedby">energy served by</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#servesmechanicalenergy">serves mechanical energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Zone">Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="mechanicalenergysuppliedby">
+        <h3>mechanical energy supplied by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#mechanicalenergysuppliedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#mechanicalEnergySuppliedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system has mechanical energy supplied by the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangemechanicalenergy">exchange mechanical energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#suppliesmechanicalenergy">supplies mechanical energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="servedby">
+        <h3>served by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#servedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#servedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a zone to a system to describe that the zone is served by a system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#serves">serves</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Zone">Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="serves">
+        <h3>serves<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#serves" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#serves</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a system to a zone to describe that the system serves the zone.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#Zone">tso:Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="servesdata">
+        <h3>serves data<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#servesdata" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#servesData</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a system to a zone to describe that the system serves data to the zone.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#serves">serves</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#Zone">tso:Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="serveselectricalenergy">
+        <h3>serves electrical energy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#serveselectricalenergy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#servesElectricalEnergy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a system to a zone to describe that the system serves electrical energy to the zone.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#servesenergy">serves energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#Zone">tso:Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="servesenergy">
+        <h3>serves energy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#servesenergy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#servesEnergy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a system to a zone to describe that the system serves energy to the zone.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#serves">serves</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#Zone">tso:Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="servesfluid">
+        <h3>serves fluid<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#servesfluid" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#servesFluid</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a system to a zone to describe that the system serves fluid mass to the zone.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#servesmass">serves mass</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#Zone">tso:Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="servesgas">
+        <h3>serves gas<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#servesgas" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#servesGas</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a system to a zone to describe that the system serves gaseous mass to the zone.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#servesfluid">serves fluid</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#Zone">tso:Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="serveslightenergy">
+        <h3>serves light energy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#serveslightenergy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#servesLightEnergy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a system to a zone to describe that the system serves light energy to the zone.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#servesenergy">serves energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#Zone">tso:Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="servesliquid">
+        <h3>serves liquid<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#servesliquid" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#servesLiquid</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a system to a zone to describe that the system serves liquid mass to the zone.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#servesfluid">serves fluid</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#Zone">tso:Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="servesmass">
+        <h3>serves mass<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#servesmass" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#servesMass</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a system to a zone to describe that the system serves mass to the zone.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#serves">serves</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#Zone">tso:Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="servesmechanicalenergy">
+        <h3>serves mechanical energy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#servesmechanicalenergy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#servesMechanicalEnergy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a system to a zone to describe that the system serves mechanical energy to the zone.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#servesenergy">serves energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#Zone">tso:Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="servessolid">
+        <h3>serves solid<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#servessolid" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#servesSolid</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a system to a zone to describe that the system serves solid mass to the zone.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#servesmass">serves mass</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#solidservedby">solid served by</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#Zone">tso:Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="servessoundenergy">
+        <h3>serves sound energy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#servessoundenergy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#servesSoundEnergy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a system to a zone to describe that the system serves sound energy to the zone.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#servesenergy">serves energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#soundenergyservedby">sound energy served by</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#Zone">tso:Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="servesthermalenergy">
+        <h3>serves thermal energy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#servesthermalenergy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#servesThermalEnergy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a system to a zone to describe that the system serves thermal energy to the zone.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#servesenergy">serves energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#thermalenergyservedby">thermal energy served by</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#Zone">tso:Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="sinkof">
+        <h3>sink of<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#sinkof" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#sinkOf</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship identifying the system of a sink.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="solidservedby">
+        <h3>solid served by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#solidservedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#solidServedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a zone to a system to describe that the zone is served solid mass by a system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#massservedby">mass served by</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Zone">Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="solidsuppliedby">
+        <h3>solid supplied by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#solidsuppliedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#solidSuppliedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system has solid mass supplied by the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangesolid">exchange solid</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#suppliessolid">supplies solid</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="soundenergyservedby">
+        <h3>sound energy served by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#soundenergyservedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#soundEnergyServedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a zone to a system to describe that the zone is served sound energy by a system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#energyservedby">energy served by</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Zone">Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="sourceof">
+        <h3>source of<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#sourceof" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#sourceOf</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship identifying the system of a source.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="stateof">
+        <h3>state of<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#stateof" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#stateOf</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship identifying the system of a state.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#State">State</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="substateof">
+        <h3>sub state of<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#substateof" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#subStateOf</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a state to its super state.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#State">State</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#State">tso:State</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="subsystemof">
+        <h3>sub system of<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#subsystemof" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#subSystemOf</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a system to its super system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="suppliesdata">
+        <h3>supplies data<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#suppliesdata" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#suppliesData</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system supplies data to the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangedata">exchange data</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="supplieselectricalenergy">
+        <h3>supplies electrical energy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#supplieselectricalenergy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#suppliesElectricalEnergy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system supplies electrical energy to the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangeelectricalenergy">exchange electrical energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="suppliesenergy">
+        <h3>supplies energy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#suppliesenergy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#suppliesEnergy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system supplies energy to the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangeenergy">exchange energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="suppliesfluid">
+        <h3>supplies fluid<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#suppliesfluid" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#suppliesFluid</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system supplies fluid mass to the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangefluid">exchange fluid</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="suppliesgas">
+        <h3>supplies gas<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#suppliesgas" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#suppliesGas</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system supplies gaseous mass to the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangegas">exchange gas</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="suppliesliquid">
+        <h3>supplies liquid<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#suppliesliquid" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#suppliesLiquid</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system supplies liquid mass to the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangeliquid">exchange liquid</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="suppliesmass">
+        <h3>supplies mass<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#suppliesmass" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#suppliesMass</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system supplies mass to the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangemass">exchange mass</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="suppliesmechanicalenergy">
+        <h3>supplies mechanical energy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#suppliesmechanicalenergy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#suppliesMechanicalEnergy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system supplies mechanical energy to the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangemechanicalenergy">exchange mechanical energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="suppliessolid">
+        <h3>supplies solid<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#suppliessolid" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#suppliesSolid</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system supplies solid mass to the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangesolid">exchange solid</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="suppliesthermalenergy">
+        <h3>supplies thermal energy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#suppliesthermalenergy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#suppliesThermalEnergy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system supplies thermal energy to the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangethermalenergy">exchange thermal energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#thermalenergysuppliedby">thermal energy supplied by</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="thermalenergysuppliedby">
+        <h3>thermal energy supplied by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#thermalenergysuppliedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#themalEnergySuppliedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking systems to describe that one system has energy supplied by the other.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#exchangethermalenergy">exchange thermal energy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="thermalenergyservedby">
+        <h3>thermal energy served by<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#thermalenergyservedby" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#thermalEnergyServedBy</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship linking a zone to a system to describe that the zone is served thermal energy by a system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#energyservedby">energy served by</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Zone">Zone</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://w3id.org/tso#System">tso:System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="datatypeproperties">
+    <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#hasdatapointkey">has data point key</a></li>
+    </ul>
+    <div class="entity property" id="hasdatapointkey">
+        <h3>has data point key<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasdatapointkey" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/tso#hasDataPointKey</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/tso#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A relationship which assignes a data point key to a system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#System">System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="annotationproperties">
+    <h2>Annotation Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#creator">creator</a></li>
+        <li><a href="#description">description</a></li>
+        <li><a href="#issued">issued</a></li>
+        <li><a href="#license">license</a></li>
+        <li><a href="#modified">modified</a></li>
+        <li><a href="#title">title</a></li>
+        <li><a href="#preferredNamespacePrefix">preferredNamespacePrefix</a></li>
+        <li><a href="#preferredNamespaceUri">preferredNamespaceUri</a></li>
+    </ul>
+    <div class="entity property" id="creator">
+        <h3>creator<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#creator" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/creator</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="description">
+        <h3>description<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#description" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/description</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="issued">
+        <h3>issued<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#issued" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/issued</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="license">
+        <h3>license<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#license" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/license</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="modified">
+        <h3>modified<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#modified" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/modified</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="title">
+        <h3>title<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#title" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/terms/title</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="preferredNamespacePrefix">
+        <h3>preferredNamespacePrefix<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#preferredNamespacePrefix" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/vann/preferredNamespacePrefix</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="preferredNamespaceUri">
+        <h3>preferredNamespaceUri<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#preferredNamespaceUri" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/vocab/vann/preferredNamespaceUri</code></td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+  <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>default (tso)</dt>
+        <dd><code>https://w3id.org/tso#</code></dd>
+        <dt>dc</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>vann</dt>
+        <dd><code>http://purl.org/vocab/vann/</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+  <section id="legend">
+      <h2>Legend</h2>
+      <table class="entity">
+          <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+          <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+          <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+          <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+          <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+          <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+          <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+      </table>
+  </section>
+</body>
+</html>
