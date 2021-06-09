@@ -1,7 +1,7 @@
 theme: jekyll-theme-minimal
 logo: /assets/img/logo-blue.png
 title: TUBES System Ontology
-description: https://w3id.org/tso
+description: The namespace for TSO terms is http://w3id.org/tso# and the suggested prefix is tso
 plugins:
   - jekyll-relative-links
 relative_links:
