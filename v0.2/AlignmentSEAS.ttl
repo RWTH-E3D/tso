@@ -1,0 +1,37 @@
+# Alignment for TUBES system ontology (TSO) to Smart Energy Aware Systems (SEAS) ontology
+# 
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+
+@prefix seas: <https://w3id.org/seas/> .
+@prefix tso: <https://w3id.org/tso#> .
+
+
+dc:creator a owl:AnnotationProperty .
+dc:title a owl:AnnotationProperty .
+dc:description a owl:AnnotationProperty .
+dc:issued a owl:AnnotationProperty .
+dc:modified a owl:AnnotationProperty .
+dc:license a owl:AnnotationProperty .
+
+:AlignmentSEAS a owl:Ontology , voaf:Vocabulary ;
+    owl:imports seas: , tso: ;
+    owl:versionInfo "v0.2" ;
+    dc:creator      "Nicolas Pauen" , "Dominik Schlütter" ;
+    dc:title        "TSO to SAREF alignment"@en ;
+    dc:description  "This ontology defines correspondences with the SEAS ontology. Alignment holds for SEAS v1.1 and TSO v0.2." ;
+    dc:issued       "2021-10-01T09:00:00"^^xsd:dateTime ;
+    dc:modified     "2021-10-08T09:00:00"^^xsd:dateTime ;
+    dc:license      <https://creativecommons.org/licenses/by/4.0/> .
+
+
+seas:System owl:equivalentClass tso:System .
+
+seas:connectedTo owl:equivalentProperty tso:connects .
+s4syst:hasSubSystem owl:equivalentProperty tso:hasSubSystem .
+s4syst:subSystemOf owl:equivalentProperty tso:subSystemOf .

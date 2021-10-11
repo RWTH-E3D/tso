@@ -1,0 +1,37 @@
+# Alignment for TUBES system ontology (TSO) to SAREF4BLDG (an extension of the Smart Applications Reference Ontology for building)
+# 
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+
+@prefix s4bldg: <https://saref.etsi.org/saref4bldg/> .
+@prefix tso: <https://w3id.org/tso#> .
+
+
+dc:creator a owl:AnnotationProperty .
+dc:title a owl:AnnotationProperty .
+dc:description a owl:AnnotationProperty .
+dc:issued a owl:AnnotationProperty .
+dc:modified a owl:AnnotationProperty .
+dc:license a owl:AnnotationProperty .
+
+:AlignmentSAREF4BLDG a owl:Ontology , voaf:Vocabulary ;
+    owl:imports s4bldg: , tso: ;
+    owl:versionInfo "v0.2" ;
+    dc:creator      "Nicolas Pauen" , "Dominik Schlütter" ;
+    dc:title        "TSO to SAREF4BLDG alignment"@en ;
+    dc:description  "This ontology defines correspondences with the SAREF ontology. Alignment holds for SAREF4BLDG v1.1.2 and TSO v0.2." ;
+    dc:issued       "2021-10-01T09:00:00"^^xsd:dateTime ;
+    dc:modified     "2021-10-08T09:00:00"^^xsd:dateTime ;
+    dc:license      <https://creativecommons.org/licenses/by/4.0/> .
+
+
+s4bldg:BuildingDevice rdf:subClassOf tso:Component .
+s4bldg:BuildingSpace rdf:subClassOf tso:Zone .
+
+s4bldg:contains rdfs:subPropertyOf tso:contains .
+s4bldg:isContainedIn rdfs:subPropertyOf tso:locatedIn .
