@@ -2,8 +2,7 @@
 
 # TUBES System Ontology
 
-<br clear="left"/>
-<br clear="left"/>
+<div clear="left"></div>
 
 ## Uses
 The scope of the TUBES System Ontology is to explicitly define the topology of interconnected building service system and their components. As a lightweight ontology it has a strong alignment to other ontologies within the W3C community and aims to provide the means to link information at data level within the AEC industry.
@@ -37,12 +36,18 @@ The functional concept describes a system as a model of a whole which has attrib
   <img src="./assets/img/functional-concept.png">
 </p>
 
+#### Alignments
+Within the W3C linked building data ecosystem several alignments are proposed. Currently, these are available:
+
+- for [Building Topology Ontology (BOT)](https://w3c-lbd-cg.github.io/bot/) as [AlignmentBOT](./alignments/AlignmentBOT.ttl)
+- for [Building Topology Ontology (SAREF))](https://saref.etsi.org) as [AlignmentSAREF](./alignments/AlignmentSAREF.ttl) for the core ontology and additional files for [AlignmentSAREF4BLDG](AlignmentSAREF4BLDG.ttl) as well as [AlignmentSAREF4SYST](AlignmentSAREF4SYST.ttl)
+- for [Smart Energy Aware Systems (SEAS)](https://w3id.org/seas/) as [AlignmentSEAS.ttl]
+
 ## Examples
-Examples of TSO are provided for the [DigitalHub](https://github.com/RWTH-E3D/DigitalHub) and CUBE projects.
+Examples for the use of TSO are provided for the [DigitalHub](https://github.com/RWTH-E3D/DigitalHub) and CUBE projects.
 
-- [DigitalHub v0.2]()
-- [CUBE v0.2]()
-
+- [DigitalHub v0.2](./examples/digitalhub.ttl)
+- [CUBE v0.2](./examples/CUBE.ttl)
 
 ## Contacts
 
