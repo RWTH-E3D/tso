@@ -41,8 +41,8 @@ The functional concept describes a system as a model of a whole which has attrib
 Within the W3C linked building data ecosystem several alignments are proposed. Currently, these are available:
 
 - for [Building Topology Ontology (BOT)](https://w3c-lbd-cg.github.io/bot/) as [AlignmentBOT](./alignments/AlignmentBOT.ttl)
-- for [Building Topology Ontology (SAREF))](https://saref.etsi.org) as [AlignmentSAREF](./alignments/AlignmentSAREF.ttl) for the core ontology and additional files for [AlignmentSAREF4BLDG](AlignmentSAREF4BLDG.ttl) as well as [AlignmentSAREF4SYST](AlignmentSAREF4SYST.ttl)
-- for [Smart Energy Aware Systems (SEAS)](https://w3id.org/seas/) as [AlignmentSEAS.ttl]
+- for [Building Topology Ontology (SAREF))](https://saref.etsi.org) as [AlignmentSAREF](./alignments/AlignmentSAREF.ttl) for the core ontology and additional files for [AlignmentSAREF4BLDG](./alignments/AlignmentSAREF4BLDG.ttl) as well as [AlignmentSAREF4SYST](./alignments/AlignmentSAREF4SYST.ttl)
+- for [Smart Energy Aware Systems (SEAS)](https://w3id.org/seas/) as [AlignmentSEAS](./alignments/AlignmentSEAS.ttl)
 
 ## Examples
 Examples for the use of TSO are provided for the [DigitalHub](https://github.com/RWTH-E3D/DigitalHub) and CUBE projects.
