@@ -30,11 +30,18 @@ The functional concept describes a system as a model of a whole which has attrib
   <img src="./assets/img/functional-concept.png">
 </p>
 
-## Examples
-Examples of TSO are provided for the [DigitalHub](https://github.com/RWTH-E3D/DigitalHub) and CUBE projects.
+#### Alignments
+Within the W3C linked building data ecosystem several alignments are proposed. Currently, these are available:
 
-- [DigitalHub v0.2]()
-- [CUBE v0.2]()
+- for [Building Topology Ontology (BOT)](https://w3c-lbd-cg.github.io/bot/) as [AlignmentBOT](./alignments/AlignmentBOT.ttl)
+- for [Building Topology Ontology (SAREF))](https://saref.etsi.org) as [AlignmentSAREF](./alignments/AlignmentSAREF.ttl) for the core ontology and additional files for [AlignmentSAREF4BLDG](AlignmentSAREF4BLDG.ttl) as well as [AlignmentSAREF4SYST](AlignmentSAREF4SYST.ttl)
+- for [Smart Energy Aware Systems (SEAS)](https://w3id.org/seas/) as [AlignmentSEAS.ttl]
+
+## Examples
+Examples for the use of TSO are provided for the [DigitalHub](https://github.com/RWTH-E3D/DigitalHub) and CUBE projects.
+
+- [DigitalHub v0.2](./examples/digitalhub.ttl)
+- [CUBE v0.2](./examples/CUBE.ttl)
 
 ## Contacts
 
