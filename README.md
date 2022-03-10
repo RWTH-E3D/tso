@@ -1,4 +1,4 @@
-<img align="right" height="200" width="330" src="./assets/img/logo-black.png">
+<img align="right" height="200" width="330" src="./assets/img/logo-blue.png">
 
 # TUBES System Ontology
 
