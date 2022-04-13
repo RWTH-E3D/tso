@@ -48,7 +48,7 @@ Within the W3C linked building data ecosystem several alignments are proposed. C
 Examples for the use of TSO are provided for an application example of an active cooled beam, the [DigitalHub](https://github.com/RWTH-E3D/DigitalHub) project and CUBE project.
 
 - [ACB v0.3.0](./examples/acb-example.ttl)
-- [DigitalHub v0.3.0](./examples/digitalhub.ttl)
+- [DigitalHub v0.3.0](./examples/DigitalHub.ttl)
 - [CUBE v0.3.0](./examples/CUBE.ttl)
 
 ## Contacts
