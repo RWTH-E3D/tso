@@ -18,8 +18,6 @@
         <dc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-02-01T12:00:00</dc:modified>
         <dc:title xml:lang="en">TUBES system ontology</dc:title>
-        <vann:preferredNamespacePrefix>tso</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/tso#"/>
         <rdfs:seeAlso rdf:resource="https://doi.org/10.1002/bapi.202000027"/>
         <owl:versionInfo>0.3.0</owl:versionInfo>
     </owl:Ontology>
@@ -106,6 +104,8 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/tso#componentOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#subSystemOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A relationship linking the component to a super system.</rdfs:comment>
         <rdfs:comment xml:lang="de">Eine Beziehung, welche die Komponente mit dessen übergeordnetem System verbindet.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -479,6 +479,8 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/tso#functionalSystemOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#subSystemOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#FunctionalSystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A relationship linking the functional system to a super system.</rdfs:comment>
         <rdfs:comment xml:lang="de">Eine Beziehung, welche das funktionale System mit dessen übergeordnetem System verbindet.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -540,9 +542,15 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/tso#hasInnerExchange">
         <owl:inverseOf rdf:resource="https://w3id.org/tso#innerExchangeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/tso#State"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Data"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Energy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Matter"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/tso#Data"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Energy"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Matter"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A relationship linking a state of a system to matter/energy/data to describe that something is exchanged within the linked system.</rdfs:comment>
         <rdfs:comment xml:lang="de">Eine Beziehung, die eine Verbindung zwischen einem Systemzustand und Materie/Energie/Daten abbildet, um zu beschreiben, dass etwas im zugeordneten System ausgetauscht wird.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -557,9 +565,15 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/tso#hasInput">
         <owl:inverseOf rdf:resource="https://w3id.org/tso#inputOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/tso#State"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Data"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Energy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Matter"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/tso#Data"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Energy"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Matter"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A relationship linking a state of a system to an input.</rdfs:comment>
         <rdfs:comment xml:lang="de">Eine Beziehung, die eine Verbindung zwischen einem Systemzustand und einem Input abbildet.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -589,9 +603,15 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/tso#hasOutput">
         <owl:inverseOf rdf:resource="https://w3id.org/tso#outputOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/tso#State"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Data"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Energy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Matter"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/tso#Data"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Energy"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Matter"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A relationship linking a state of a system to an output.</rdfs:comment>
         <rdfs:comment xml:lang="de">Eine Beziehung, die eine Verbindung zwischen einem Systemzustand und einem Output abbildet.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -604,6 +624,7 @@
     <!-- https://w3id.org/tso#hasProperty -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/tso#hasProperty">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/tso#Property"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
         <rdfs:label xml:lang="en">A realtionship linking something to a property.</rdfs:label>
@@ -725,9 +746,15 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/tso#hasTransmissionFrom">
         <owl:inverseOf rdf:resource="https://w3id.org/tso#transmitsFrom"/>
         <rdfs:domain rdf:resource="https://w3id.org/tso#ConnectionPoint"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Data"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Energy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Matter"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/tso#Data"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Energy"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Matter"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A relationship linking a transmitting connection point to an input or output.</rdfs:comment>
         <rdfs:comment xml:lang="de">Eine Beziehung, welche einem Verbindungspunkt den aussendenen Input oder Output zuordnet.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -742,9 +769,15 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/tso#hasTransmissionThrough">
         <owl:inverseOf rdf:resource="https://w3id.org/tso#transmitsThrough"/>
         <rdfs:domain rdf:resource="https://w3id.org/tso#Connection"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Data"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Energy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Matter"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/tso#Data"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Energy"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Matter"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A relationship linking a transfering connection to an input or output.</rdfs:comment>
         <rdfs:comment xml:lang="de">Eine Beziehung, welche einer Verbidnung den zu übertragenden Input oder Output zuordnet.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -759,9 +792,15 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/tso#hasTransmissionTo">
         <owl:inverseOf rdf:resource="https://w3id.org/tso#transmitsTo"/>
         <rdfs:domain rdf:resource="https://w3id.org/tso#ConnectionPoint"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Data"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Energy"/>
-        <rdfs:range rdf:resource="https://w3id.org/tso#Matter"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/tso#Data"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Energy"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Matter"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:comment xml:lang="en">A relationship linking a receiving connection point to an input or output.</rdfs:comment>
         <rdfs:comment xml:lang="de">Eine Beziehung, welche einem Verbindungspunkt den empfangenen Input oder Output zuordnet.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -774,9 +813,15 @@
     <!-- https://w3id.org/tso#innerExchangeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/tso#innerExchangeOf">
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Data"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Energy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Matter"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/tso#Data"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Energy"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Matter"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/tso#State"/>
         <rdfs:comment xml:lang="en">A relationship linking matter/energy/data to a state of a system to describe that something is exchanged within the linked system.</rdfs:comment>
         <rdfs:comment xml:lang="de">Eine Beziehung, die eine Verbindung zwischen Materie/Energie/Daten und einem Systemzustand abbildet, um zu beschreiben, dass etwas im zugeordneten System ausgetauscht wird.</rdfs:comment>
@@ -790,9 +835,15 @@
     <!-- https://w3id.org/tso#inputOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/tso#inputOf">
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Data"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Energy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Matter"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/tso#Data"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Energy"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Matter"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/tso#State"/>
         <rdfs:comment xml:lang="en">A relationship linking an input to a state of a system.</rdfs:comment>
         <rdfs:comment xml:lang="de">Eine Beziehung, die eine Verbindung zwischen einem Input und einem Systemzustand abbildet.</rdfs:comment>
@@ -807,6 +858,8 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/tso#integratedSystemOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#subSystemOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#IntegratedSystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A relationship linking the integrated system to a super system.</rdfs:comment>
         <rdfs:comment xml:lang="de">Eine Beziehung, welche den Systemverbund mit dessen übergeordnetem System verbindet.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -884,9 +937,15 @@
     <!-- https://w3id.org/tso#outputOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/tso#outputOf">
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Data"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Energy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Matter"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/tso#Data"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Energy"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Matter"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/tso#State"/>
         <rdfs:comment xml:lang="en">A relationship linking an output to a state of a system.</rdfs:comment>
         <rdfs:comment xml:lang="de">Eine Beziehung, die eine Verbindung zwischen einem Output und einem Systemzustand abbildet.</rdfs:comment>
@@ -1581,6 +1640,8 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/tso#technicalSystemOf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/tso#subSystemOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/tso#TechnicalSystem"/>
+        <rdfs:range rdf:resource="https://w3id.org/tso#System"/>
         <rdfs:comment xml:lang="en">A relationship linking the technical system to a super system.</rdfs:comment>
         <rdfs:comment xml:lang="de">Eine Beziehung, welche das technische System mit dessen übergeordnetem System verbindet.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/tso#"/>
@@ -1609,9 +1670,15 @@
     <!-- https://w3id.org/tso#transmitsFrom -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/tso#transmitsFrom">
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Data"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Energy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Matter"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/tso#Data"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Energy"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Matter"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/tso#ConnectionPoint"/>
         <rdfs:comment xml:lang="en">A relationship linking an input or output to the transmitting connection point.</rdfs:comment>
         <rdfs:comment xml:lang="de">Eine Beziehung, welche einem Input oder Output den aussendenen Verbindungspunkt zuordnet.</rdfs:comment>
@@ -1625,9 +1692,15 @@
     <!-- https://w3id.org/tso#transmitsThrough -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/tso#transmitsThrough">
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Data"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Energy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Matter"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/tso#Data"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Energy"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Matter"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/tso#ConnectionPoint"/>
         <rdfs:comment xml:lang="en">A relationship linking an input or output to the transfering connection.</rdfs:comment>
         <rdfs:comment xml:lang="de">Eine Beziehung, welche einem Input oder Output die übertragende Verbindung zuordnet.</rdfs:comment>
@@ -1641,9 +1714,15 @@
     <!-- https://w3id.org/tso#transmitsTo -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/tso#transmitsTo">
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Data"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Energy"/>
-        <rdfs:domain rdf:resource="https://w3id.org/tso#Matter"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/tso#Data"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Energy"/>
+                    <rdf:Description rdf:about="https://w3id.org/tso#Matter"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/tso#Connection"/>
         <rdfs:comment xml:lang="en">A relationship linking an input or output to the receiving connection point.</rdfs:comment>
         <rdfs:comment xml:lang="de">Eine Beziehung, welche einem Input oder Output den empfangenen Verbindungspunkt zuordnet.</rdfs:comment>
