@@ -18,8 +18,6 @@
                          dc:license <https://creativecommons.org/licenses/by/4.0/> ;
                          dc:modified "2022-02-01T12:00:00"^^xsd:dateTime ;
                          dc:title "TUBES system ontology"@en ;
-                         vann:preferredNamespacePrefix "tso" ;
-                         vann:preferredNamespaceUri <https://w3id.org/tso#> ;
                          rdfs:seeAlso <https://doi.org/10.1002/bapi.202000027> ;
                          owl:versionInfo "0.3.0" .
 
@@ -70,6 +68,8 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/tso#componentOf
 tso:componentOf rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf tso:subSystemOf ;
+                rdfs:domain tso:Component ;
+                rdfs:range tso:System ;
                 rdfs:comment "A relationship linking the component to a super system."@en ,
                              "Eine Beziehung, welche die Komponente mit dessen übergeordnetem System verbindet."@de ;
                 rdfs:isDefinedBy <https://w3id.org/tso#> ;
@@ -371,6 +371,8 @@ tso:fluidSuppliedBy rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/tso#functionalSystemOf
 tso:functionalSystemOf rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf tso:subSystemOf ;
+                       rdfs:domain tso:FunctionalSystem ;
+                       rdfs:range tso:System ;
                        rdfs:comment "A relationship linking the functional system to a super system."@en ,
                                     "Eine Beziehung, welche das funktionale System mit dessen übergeordnetem System verbindet."@de ;
                        rdfs:isDefinedBy <https://w3id.org/tso#> ;
@@ -420,9 +422,12 @@ tso:hasFunctionalSystem rdf:type owl:ObjectProperty ;
 tso:hasInnerExchange rdf:type owl:ObjectProperty ;
                      owl:inverseOf tso:innerExchangeOf ;
                      rdfs:domain tso:State ;
-                     rdfs:range tso:Data ,
-                                tso:Energy ,
-                                tso:Matter ;
+                     rdfs:range [ rdf:type owl:Class ;
+                                  owl:unionOf ( tso:Data
+                                                tso:Energy
+                                                tso:Matter
+                                              )
+                                ] ;
                      rdfs:comment "A relationship linking a state of a system to matter/energy/data to describe that something is exchanged within the linked system."@en ,
                                   "Eine Beziehung, die eine Verbindung zwischen einem Systemzustand und Materie/Energie/Daten abbildet, um zu beschreiben, dass etwas im zugeordneten System ausgetauscht wird."@de ;
                      rdfs:isDefinedBy <https://w3id.org/tso#> ;
@@ -434,9 +439,12 @@ tso:hasInnerExchange rdf:type owl:ObjectProperty ;
 tso:hasInput rdf:type owl:ObjectProperty ;
              owl:inverseOf tso:inputOf ;
              rdfs:domain tso:State ;
-             rdfs:range tso:Data ,
-                        tso:Energy ,
-                        tso:Matter ;
+             rdfs:range [ rdf:type owl:Class ;
+                          owl:unionOf ( tso:Data
+                                        tso:Energy
+                                        tso:Matter
+                                      )
+                        ] ;
              rdfs:comment "A relationship linking a state of a system to an input."@en ,
                           "Eine Beziehung, die eine Verbindung zwischen einem Systemzustand und einem Input abbildet."@de ;
              rdfs:isDefinedBy <https://w3id.org/tso#> ;
@@ -460,9 +468,12 @@ tso:hasIntegratedSystem rdf:type owl:ObjectProperty ;
 tso:hasOutput rdf:type owl:ObjectProperty ;
               owl:inverseOf tso:outputOf ;
               rdfs:domain tso:State ;
-              rdfs:range tso:Data ,
-                         tso:Energy ,
-                         tso:Matter ;
+              rdfs:range [ rdf:type owl:Class ;
+                           owl:unionOf ( tso:Data
+                                         tso:Energy
+                                         tso:Matter
+                                       )
+                         ] ;
               rdfs:comment "A relationship linking a state of a system to an output."@en ,
                            "Eine Beziehung, die eine Verbindung zwischen einem Systemzustand und einem Output abbildet."@de ;
               rdfs:isDefinedBy <https://w3id.org/tso#> ;
@@ -472,6 +483,7 @@ tso:hasOutput rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/tso#hasProperty
 tso:hasProperty rdf:type owl:ObjectProperty ;
+                rdfs:domain owl:Thing ;
                 rdfs:range tso:Property ;
                 rdfs:isDefinedBy <https://w3id.org/tso#> ;
                 rdfs:label "A realtionship linking something to a property."@en ,
@@ -569,9 +581,12 @@ tso:hasTechnicalSystem rdf:type owl:ObjectProperty ;
 tso:hasTransmissionFrom rdf:type owl:ObjectProperty ;
                         owl:inverseOf tso:transmitsFrom ;
                         rdfs:domain tso:ConnectionPoint ;
-                        rdfs:range tso:Data ,
-                                   tso:Energy ,
-                                   tso:Matter ;
+                        rdfs:range [ rdf:type owl:Class ;
+                                     owl:unionOf ( tso:Data
+                                                   tso:Energy
+                                                   tso:Matter
+                                                 )
+                                   ] ;
                         rdfs:comment "A relationship linking a transmitting connection point to an input or output."@en ,
                                      "Eine Beziehung, welche einem Verbindungspunkt den aussendenen Input oder Output zuordnet."@de ;
                         rdfs:isDefinedBy <https://w3id.org/tso#> ;
@@ -583,9 +598,12 @@ tso:hasTransmissionFrom rdf:type owl:ObjectProperty ;
 tso:hasTransmissionThrough rdf:type owl:ObjectProperty ;
                            owl:inverseOf tso:transmitsThrough ;
                            rdfs:domain tso:Connection ;
-                           rdfs:range tso:Data ,
-                                      tso:Energy ,
-                                      tso:Matter ;
+                           rdfs:range [ rdf:type owl:Class ;
+                                        owl:unionOf ( tso:Data
+                                                      tso:Energy
+                                                      tso:Matter
+                                                    )
+                                      ] ;
                            rdfs:comment "A relationship linking a transfering connection to an input or output."@en ,
                                         "Eine Beziehung, welche einer Verbidnung den zu übertragenden Input oder Output zuordnet."@de ;
                            rdfs:isDefinedBy <https://w3id.org/tso#> ;
@@ -597,9 +615,12 @@ tso:hasTransmissionThrough rdf:type owl:ObjectProperty ;
 tso:hasTransmissionTo rdf:type owl:ObjectProperty ;
                       owl:inverseOf tso:transmitsTo ;
                       rdfs:domain tso:ConnectionPoint ;
-                      rdfs:range tso:Data ,
-                                 tso:Energy ,
-                                 tso:Matter ;
+                      rdfs:range [ rdf:type owl:Class ;
+                                   owl:unionOf ( tso:Data
+                                                 tso:Energy
+                                                 tso:Matter
+                                               )
+                                 ] ;
                       rdfs:comment "A relationship linking a receiving connection point to an input or output."@en ,
                                    "Eine Beziehung, welche einem Verbindungspunkt den empfangenen Input oder Output zuordnet."@de ;
                       rdfs:isDefinedBy <https://w3id.org/tso#> ;
@@ -609,9 +630,12 @@ tso:hasTransmissionTo rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/tso#innerExchangeOf
 tso:innerExchangeOf rdf:type owl:ObjectProperty ;
-                    rdfs:domain tso:Data ,
-                                tso:Energy ,
-                                tso:Matter ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( tso:Data
+                                                tso:Energy
+                                                tso:Matter
+                                              )
+                                ] ;
                     rdfs:range tso:State ;
                     rdfs:comment "A relationship linking matter/energy/data to a state of a system to describe that something is exchanged within the linked system."@en ,
                                  "Eine Beziehung, die eine Verbindung zwischen Materie/Energie/Daten und einem Systemzustand abbildet, um zu beschreiben, dass etwas im zugeordneten System ausgetauscht wird."@de ;
@@ -622,9 +646,12 @@ tso:innerExchangeOf rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/tso#inputOf
 tso:inputOf rdf:type owl:ObjectProperty ;
-            rdfs:domain tso:Data ,
-                        tso:Energy ,
-                        tso:Matter ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( tso:Data
+                                        tso:Energy
+                                        tso:Matter
+                                      )
+                        ] ;
             rdfs:range tso:State ;
             rdfs:comment "A relationship linking an input to a state of a system."@en ,
                          "Eine Beziehung, die eine Verbindung zwischen einem Input und einem Systemzustand abbildet."@de ;
@@ -636,6 +663,8 @@ tso:inputOf rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/tso#integratedSystemOf
 tso:integratedSystemOf rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf tso:subSystemOf ;
+                       rdfs:domain tso:IntegratedSystem ;
+                       rdfs:range tso:System ;
                        rdfs:comment "A relationship linking the integrated system to a super system."@en ,
                                     "Eine Beziehung, welche den Systemverbund mit dessen übergeordnetem System verbindet."@de ;
                        rdfs:isDefinedBy <https://w3id.org/tso#> ,
@@ -698,9 +727,12 @@ tso:mechanicalEnergySuppliedBy rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/tso#outputOf
 tso:outputOf rdf:type owl:ObjectProperty ;
-             rdfs:domain tso:Data ,
-                         tso:Energy ,
-                         tso:Matter ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( tso:Data
+                                         tso:Energy
+                                         tso:Matter
+                                       )
+                         ] ;
              rdfs:range tso:State ;
              rdfs:comment "A relationship linking an output to a state of a system."@en ,
                           "Eine Beziehung, die eine Verbindung zwischen einem Output und einem Systemzustand abbildet."@de ;
@@ -1257,6 +1289,8 @@ tso:suppliesThermalEnergy rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/tso#technicalSystemOf
 tso:technicalSystemOf rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf tso:subSystemOf ;
+                      rdfs:domain tso:TechnicalSystem ;
+                      rdfs:range tso:System ;
                       rdfs:comment "A relationship linking the technical system to a super system."@en ,
                                    "Eine Beziehung, welche das technische System mit dessen übergeordnetem System verbindet."@de ;
                       rdfs:isDefinedBy <https://w3id.org/tso#> ;
@@ -1279,9 +1313,12 @@ tso:themalEnergySuppliedBy rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/tso#transmitsFrom
 tso:transmitsFrom rdf:type owl:ObjectProperty ;
-                  rdfs:domain tso:Data ,
-                              tso:Energy ,
-                              tso:Matter ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( tso:Data
+                                              tso:Energy
+                                              tso:Matter
+                                            )
+                              ] ;
                   rdfs:range tso:ConnectionPoint ;
                   rdfs:comment "A relationship linking an input or output to the transmitting connection point."@en ,
                                "Eine Beziehung, welche einem Input oder Output den aussendenen Verbindungspunkt zuordnet."@de ;
@@ -1292,9 +1329,12 @@ tso:transmitsFrom rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/tso#transmitsThrough
 tso:transmitsThrough rdf:type owl:ObjectProperty ;
-                     rdfs:domain tso:Data ,
-                                 tso:Energy ,
-                                 tso:Matter ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( tso:Data
+                                                 tso:Energy
+                                                 tso:Matter
+                                               )
+                                 ] ;
                      rdfs:range tso:ConnectionPoint ;
                      rdfs:comment "A relationship linking an input or output to the transfering connection."@en ,
                                   "Eine Beziehung, welche einem Input oder Output die übertragende Verbindung zuordnet."@de ;
@@ -1305,9 +1345,12 @@ tso:transmitsThrough rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/tso#transmitsTo
 tso:transmitsTo rdf:type owl:ObjectProperty ;
-                rdfs:domain tso:Data ,
-                            tso:Energy ,
-                            tso:Matter ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( tso:Data
+                                            tso:Energy
+                                            tso:Matter
+                                          )
+                            ] ;
                 rdfs:range tso:Connection ;
                 rdfs:comment "A relationship linking an input or output to the receiving connection point."@en ,
                              "Eine Beziehung, welche einem Input oder Output den empfangenen Verbindungspunkt zuordnet."@de ;
